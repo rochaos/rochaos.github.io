@@ -314,7 +314,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/04/04/My-first-post/" class="post-title-link" itemprop="url">My first post</a>
+                <a href="/2019/04/04/My-first-post/" class="post-title-link" itemprop="url">Basic steps for development on github</a>
               
             
           </h1>
@@ -339,9 +339,13 @@
                 
               
 
-              <time title="Created: 2019-04-04 13:28:32" itemprop="dateCreated datePublished" datetime="2019-04-04T13:28:32+08:00">2019-04-04</time>
+              <time title="Created: 2019-04-04 13:28:32 / Modified: 14:38:30" itemprop="dateCreated datePublished" datetime="2019-04-04T13:28:32+08:00">2019-04-04</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -376,7 +380,37 @@
       
         
           
-            
+            <p>Followed my friend ryan’s introduction on how to build a blog on github, actually I meant to start from zero as I know some basic usage of html, css and js, but since hexo is highly recommened to make life easier, then just give it a try.</p>
+<p>Basicly is following <a href="https://ryanluoxu.github.io/2017/11/24/%E7%94%A8-Hexo-%E5%92%8C-GitHub-Pages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener">https://ryanluoxu.github.io/2017/11/24/%E7%94%A8-Hexo-%E5%92%8C-GitHub-Pages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a></p>
+<p>But since I’m using vs code on windows, here is the point view of set up</p>
+<h1 id="Prepare-the-environment"><a href="#Prepare-the-environment" class="headerlink" title="Prepare the environment"></a>Prepare the environment</h1><ul>
+<li>A terminal<br>  <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">https://code.visualstudio.com/</a><br>  VS code is a powerful tool for code editing and has many functions, it even support java.<br>  VS code has build-in terminal (ctrl+`), which is good enough to use</li>
+<li>Git<br>  get it from <a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a>, git mesh is not necessary since we can use the terminal in VS code</li>
+<li>Node.js<br>  get it from <a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></li>
+<li>Install hexo<br>  After installation of git and node.js, restart vs code, ctrl + ` to call out the terminal<br>  Make use of the basic command ‘cd’ to change the current folder to whatever you like<br>  type ‘npm install hexo-cli -g’ to install the hexo framework, if shows erro, something wrong with your node.js<br>  type ‘npm install hexo-deployer-git –save’ to install hexo-deployer-git, this is needed for later deployment<br>  type ‘hexo init blog’ and wait, this will setup the environment for you local hexo blog<br>  type ‘cd blog’ to change the current folder to the hexo blog folder<br>  type ‘hexo server’ and your shall be able to visit the local blog at <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a><br>  you may wish to post your own blog by type ‘hexo new “blog name”‘, and the blog will be at blog/source/_posts/blog-name.md</li>
+</ul>
+<h1 id="Prepare-the-account"><a href="#Prepare-the-account" class="headerlink" title="Prepare the account"></a>Prepare the account</h1><ul>
+<li>All your need is a github account, <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a>, go and get one.</li>
+<li>Create a repository named username.github.io, username is your perferred username </li>
+</ul>
+<h1 id="Deploying"><a href="#Deploying" class="headerlink" title="Deploying"></a>Deploying</h1><ul>
+<li>Open the _config.yml file under blog folder, you can use vs code to edit this file</li>
+<li>Under #Deployment section<br>  deploy:<pre><code>type: git   
+repo: https://github.com/username/username.github.io
+branch: master
+</code></pre></li>
+<li>Save the file, come back to the terminal<br>  type ‘hexo clean’ to clean the folder<br>  type ‘hexo deploy’ to deploy to github, if shows erro, check your config file, take care of the repo link<br>  You shall see a pop up window from github and asking for your log-in<br>  After log-in, the deployment will carry on until you saw some message like ?[32mINFO ?[39m Deploy done: ?[35mgit?[39m</li>
+</ul>
+<h1 id="Check-your-own-blog"><a href="#Check-your-own-blog" class="headerlink" title="Check your own blog"></a>Check your own blog</h1><ul>
+<li>Go to your github to confirm there is some files uploaded in your repository</li>
+<li>Your blog will be at username.github.io</li>
+</ul>
+<h1 id="Other-configuration"><a href="#Other-configuration" class="headerlink" title="Other configuration"></a>Other configuration</h1><ul>
+<li>Configuration for other parts can be followed at this document <a href="https://hexo.io/docs/configuration" target="_blank" rel="noopener">https://hexo.io/docs/configuration</a></li>
+<li>After configuration and other edit, you can alway check it locally first by ‘hexo server’</li>
+<li>If happy with the result, ‘hexo clean’ &amp;&amp; ‘hexo deploy’</li>
+</ul>
+<h1 id="Enjoy"><a href="#Enjoy" class="headerlink" title="Enjoy!"></a>Enjoy!</h1>
           
         
       
