@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="之前把web development入了个门，然后发现这行业其实挺难入门的= =。就当打了个基础算了，转身投入java怀抱。 作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵，不过还没读完所以也不知道这书值不值得推荐。 基本都是照">
+<meta name="keywords" content="web development, java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java cheatsheet">
+<meta property="og:url" content="https://rochaos.github.io/2019/04/04/java-cheatsheet/index.html">
+<meta property="og:site_name" content="Marvin&#39;s Development Record">
+<meta property="og:description" content="之前把web development入了个门，然后发现这行业其实挺难入门的= =。就当打了个基础算了，转身投入java怀抱。 作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵，不过还没读完所以也不知道这书值不值得推荐。 基本都是照">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-04-04T07:59:55.126Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java cheatsheet">
+<meta name="twitter:description" content="之前把web development入了个门，然后发现这行业其实挺难入门的= =。就当打了个基础算了，转身投入java怀抱。 作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵，不过还没读完所以也不知道这书值不值得推荐。 基本都是照">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://rochaos.github.io/2019/04/04/java-cheatsheet/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>java cheatsheet | Marvin's Development Record</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Marvin's Development Record</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">DON'T PANIC</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rochaos.github.io/2019/04/04/java-cheatsheet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rochaos">
+      <meta itemprop="description" content="Learn to be a programmer">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marvin's Development Record">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">java cheatsheet
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-04 14:43:32 / Modified: 15:59:55" itemprop="dateCreated datePublished" datetime="2019-04-04T14:43:32+08:00">2019-04-04</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>之前把web development入了个门，然后发现这行业其实挺难入门的= =。就当打了个基础算了，转身投入java怀抱。</p>
+<p>作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。</p>
+<p>目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵，不过还没读完所以也不知道这书值不值得推荐。</p>
+<p>基本都是照书抄的废话和弱智问题，纯自用，对大佬而言毫无参考意义。</p>
+<a id="more"></a>
+<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><ul>
+<li><strong>main()</strong> method is entry point of all Java applications, whenever a Java application is started, the main() method is the first method to be called;</li>
+<li>all statemtns in Java must end with a <strong>semi-colon</strong>;</li>
+</ul>
+<h1 id="Variables-and-Operators"><a href="#Variables-and-Operators" class="headerlink" title="Variables and Operators"></a>Variables and Operators</h1><h2 id="8-Basic-data-types-predefined-Primitive-data-types"><a href="#8-Basic-data-types-predefined-Primitive-data-types" class="headerlink" title="8 Basic data types (predefined) / Primitive data types"></a>8 Basic data types (predefined) / Primitive data types</h2><ul>
+<li>For storing integers<ul>
+<li><strong>byte</strong> (-128 to 127), use 1 byte (2^8) of storage space.</li>
+<li><strong>short</strong> (-32768 to 32767), use 2 byte (2^16) of storage space.</li>
+<li><strong>int</strong> (-2^31 to 2^31-1), use 4 byte (2^32) of storage space, most commonly used data type</li>
+<li><strong>long</strong> (-2^63 to 2^63-1), use 8 byte (2^64) of storage space, need to add suffix ‘L’ to end of the number, rarely used.</li>
+</ul>
+</li>
+<li>For storing floating point number<ul>
+<li><strong>float</strong> (-3.40282347E38 to 3.40282347E38), use 4 byte of storage space, as precision of about 7 digits (1.2345678), need to add suffix ‘F’ to the end of number.</li>
+<li><strong>double</strong> (-1.79769……E308 to 1.79769….E308), use 8 byte of storage space, with precision of about 15 digits, by default Jave treat floating point number as double.</li>
+</ul>
+</li>
+<li><p>Other primitive data type</p>
+<ul>
+<li><strong>char</strong> (single unicode characters), use 2 bytes of memory, enclose in single quotes, eg. char grade = ‘A’;</li>
+<li><strong>boolean</strong> (true and false)</li>
+</ul>
+</li>
+<li><p>Other types are reference types</p>
+</li>
+</ul>
+<h2 id="Basic-Operators"><a href="#Basic-Operators" class="headerlink" title="Basic Operators"></a>Basic Operators</h2><ul>
+<li><code>x = x + y</code> is equal to <code>x +=y</code></li>
+<li>For division, <code>int / int</code> = round down int, any of non-int will give a truncated(shortened) non-int<br>  ( <code>7/2=3</code>, <code>7.0 /2 = 3.5</code>, <code>7/2.0=3.5</code>, <code>7.0/2.0=3.5</code>)</li>
+<li>System.out.println(<strong>counter++</strong>) means print counter first, then counter++<br>System.out.println(<strong>++counter</strong>) means counter++ first, then print counter</li>
+</ul>
+<h2 id="Type-Casting"><a href="#Type-Casting" class="headerlink" title="Type Casting"></a>Type Casting</h2><ul>
+<li><p>Widening primitive conversion, smaller data to larger type, can be done directly</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">short</span> age = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">double</span> myDouble = age;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Narrowing primitive conversion, larger to smaller, need use a pair of parenthesis(), may lost data, decimal portion is truncated.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = (<span class="keyword">int</span>) <span class="number">20.9</span>;</span><br><span class="line">x will be <span class="number">20</span>, not <span class="number">21</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="Arrays-and-Strings"><a href="#Arrays-and-Strings" class="headerlink" title="Arrays and Strings"></a>Arrays and Strings</h1><h2 id="String-Methods"><a href="#String-Methods" class="headerlink" title="String Methods"></a>String Methods</h2><ul>
+<li><code>.length()</code> return total number of characters</li>
+<li><code>.toUpperCase()/.toLowerCase()</code> return string with uppercase/lowercase characters</li>
+<li><code>.substring(i)</code> return a string start from i<sup>th</sup> character (count from 0)</li>
+<li><code>.substring(m,n)</code> return a string start from m<sup>th</sup> and end at n<sup>th</sup> character (n<sup>th</sup> character is not included)</li>
+<li><code>.charAt(i)</code> return i<sup>th</sup> character of the string</li>
+<li><code>.equals(&quot;string&quot;)</code> return ture or false if they are equal or not</li>
+<li><p><code>.split(&quot;separator&quot;)</code> returns array of substrings, based on the separator<br>  for example:</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String names = <span class="string">"Peter, John, Andy, David"</span>;</span><br><span class="line">String[] splitNames = names.split(<span class="string">", "</span>);</span><br></pre></td></tr></table></figure>
+<pre><code>splitNames will be {&quot;Peter&quot;, &quot;John&quot;, &quot;Andy&quot;, &quot;David&quot;};
+</code></pre></li>
+</ul>
+<h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><p>Initialize an array, once initialize an array, size of the array <strong>cannot be changed</strong> anymore.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] userAge;<span class="comment">// declare userAge as array of int</span></span><br><span class="line">userAge = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;; <span class="comment">//initialize and assign array to variable</span></span><br></pre></td></tr></table></figure></p>
+<p>or<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] userAge = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;; <span class="comment">// new int[] can be omitted for one line</span></span><br></pre></td></tr></table></figure></p>
+<p>or<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] userAge = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>]; <span class="comment">// by deafult will be &#123;0, 0, 0, 0, 0&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Array-Methonds"><a href="#Array-Methonds" class="headerlink" title="Array Methonds"></a>Array Methonds</h2><p>to use the pre-weitten methods, need to add the statement<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> helloworld;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HellowWorld</span> </span>&#123;</span><br><span class="line"><span class="comment">//code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><code>Arrays.equals(arr1, arr2)</code> return true only if both value and order are same</li>
+<li><code>Arrays.copyOfRange(source, m ,n)</code> will return elements from index m to index (n-1), index n is not copied</li>
+<li><code>Arrays.toString(arr)</code> return the contents of an array</li>
+<li><code>Arrays.sort(arr)</code> will sort the array in ascending order</li>
+<li><code>Arrays.binarySearch(arr, value)</code> will return the index of the value for a sorted array, if not found, will return -i, (i-1) is the supposed index</li>
+<li><code>.length</code> return the size of a array, no parenthesis</li>
+</ul>
+<h2 id="Primitive-Type-vs-Reference-Type"><a href="#Primitive-Type-vs-Reference-Type" class="headerlink" title="Primitive Type vs Reference Type"></a>Primitive Type vs Reference Type</h2><p>The only 8 primitive type will store its own data<br>Reference type (string, array, ….) only store a reference to the data, e.g. address of the memory location of the data</p>
+<h1 id="Interactive-program"><a href="#Interactive-program" class="headerlink" title="Interactive program"></a>Interactive program</h1><h2 id="Escape-Sequences"><a href="#Escape-Sequences" class="headerlink" title="Escape Sequences"></a>Escape Sequences</h2><p><code>&quot;\t&quot;</code> to print tab<br><code>&quot;\n&quot;</code> to print a newline<br><code>&quot;\\&quot;</code> to print \ itself<br><code>&quot;\&quot;&quot;</code> to print “</p>
+<h2 id="Formatting-Outputs"><a href="#Formatting-Outputs" class="headerlink" title="Formatting Outputs"></a>Formatting Outputs</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.printf(<span class="string">"%.3f divided by %d is %.2f"</span>, <span class="number">5.45</span>, <span class="number">3</span>, <span class="number">5.45</span>/<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+<p>will give the output as 5.450 divided by 3 is 1.82.</p>
+<p>Format specifiers always begin with <code>%</code> and end with a <code>converter</code><br><code>%</code>+<code>flag</code>+<code>converter</code></p>
+<h3 id="Converters"><a href="#Converters" class="headerlink" title="Converters"></a>Converters</h3><p><code>f</code> for floating point number<br><code>d</code> for integer<br><code>n</code> for newline<br><code>s</code> for string</p>
+<h3 id="Flags"><a href="#Flags" class="headerlink" title="Flags"></a>Flags</h3><p><code>%witdh_flag</code> = specify total width including decimal point, spaces will in front of the number to give the total width<br><code>%.</code> = specify decimal places<br><code>%,</code> = specify that a thousands spearator is used<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.printf(<span class="string">"%,.2f"</span>, <span class="number">12345.56789</span>) = <span class="number">12</span>,<span class="number">345.57</span>);</span><br></pre></td></tr></table></figure></p>
+<h2 id="Accepting-User-Input"><a href="#Accepting-User-Input" class="headerlink" title="Accepting User Input"></a>Accepting User Input</h2><p>The most common way is to use a Scanner object<br>to import scanner class<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner; <span class="comment">//to import scanner class</span></span><br><span class="line">Scanner reader = <span class="keyword">new</span> Scanner(System.in); <span class="comment">//to accept inputs from users</span></span><br><span class="line">typeOfData args = input.nextTypeOfData(); <span class="comment">//for different type of input</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/04/My-first-post/" rel="next" title="Basic steps for development on github">
+                <i class="fa fa-chevron-left"></i> Basic steps for development on github
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Rochaos</p>
+              <div class="site-description motion-element" itemprop="description">Learn to be a programmer</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  
+                </div>
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips"><span class="nav-number">1.</span> <span class="nav-text">Tips</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables-and-Operators"><span class="nav-number">2.</span> <span class="nav-text">Variables and Operators</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Basic-data-types-predefined-Primitive-data-types"><span class="nav-number">2.1.</span> <span class="nav-text">8 Basic data types (predefined) / Primitive data types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Operators"><span class="nav-number">2.2.</span> <span class="nav-text">Basic Operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Type-Casting"><span class="nav-number">2.3.</span> <span class="nav-text">Type Casting</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Arrays-and-Strings"><span class="nav-number">3.</span> <span class="nav-text">Arrays and Strings</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#String-Methods"><span class="nav-number">3.1.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array"><span class="nav-number">3.2.</span> <span class="nav-text">Array</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-Methonds"><span class="nav-number">3.3.</span> <span class="nav-text">Array Methonds</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Type-vs-Reference-Type"><span class="nav-number">3.4.</span> <span class="nav-text">Primitive Type vs Reference Type</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Interactive-program"><span class="nav-number">4.</span> <span class="nav-text">Interactive program</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Escape-Sequences"><span class="nav-number">4.1.</span> <span class="nav-text">Escape Sequences</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Formatting-Outputs"><span class="nav-number">4.2.</span> <span class="nav-text">Formatting Outputs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Converters"><span class="nav-number">4.2.1.</span> <span class="nav-text">Converters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flags"><span class="nav-number">4.2.2.</span> <span class="nav-text">Flags</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Accepting-User-Input"><span class="nav-number">4.3.</span> <span class="nav-text">Accepting User Input</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Rochaos</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
