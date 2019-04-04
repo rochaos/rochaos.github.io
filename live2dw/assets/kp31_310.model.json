@@ -1,0 +1,79 @@
+{
+  "model": "model.moc",
+  "textures": [
+    "model/texture_00.png"
+  ],
+  "hit_areas": [
+    {
+      "name": "D_REF_HEAD",
+      "id": "D_REF_HEAD",
+      "motion": "tap"
+    },
+    {
+      "name": "D_REF_BODY",
+      "id": "D_REF_BODY",
+      "motion": "tap"
+    },
+    {
+      "name": "D_REF_LEG",
+      "id": "D_REF_LEG",
+      "motion": "tap"
+    },
+    {
+      "name": "D___RootPart__.00",
+      "id": "D___RootPart__.00",
+      "motion": "tap"
+    },
+    {
+      "name": "D___RootPart__.02",
+      "id": "D___RootPart__.02",
+      "motion": "tap"
+    },
+    {
+      "name": "D___RootPart__.01",
+      "id": "D___RootPart__.01",
+      "motion": "tap"
+    },
+    {
+      "name": "D___RootPart__.03",
+      "id": "D___RootPart__.03",
+      "motion": "tap"
+    }
+  ],
+  "motions": {
+    "idle": [
+      {
+        "file": "motions/daiji_idle_01.mtn",
+        "fade_in": 2000,
+        "fade_out": 2000
+      },
+      {
+        "file": "motions/wait_1.mtn",
+        "fade_in": 2000,
+        "fade_out": 2000
+      },
+      {
+        "file": "motions/wait_2.mtn",
+        "fade_in": 2000,
+        "fade_out": 2000
+      }
+    ],
+    "tap": [
+      {
+        "file": "motions/touch_1.mtn"
+      },
+      {
+        "file": "motions/touch_2.mtn"
+      },
+      {
+        "file": "motions/touch_3.mtn"
+      },
+      {
+        "file": "motions/touch_4.mtn"
+      },
+      {
+        "file": "motions/touch_5.mtn"
+      }
+    ]
+  }
+}

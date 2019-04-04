@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="之前把web development入了个门，然后发现这行业其实挺难入门的= =。就当打了个基础算了，转身投入java怀抱。 作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵，不过还没读完所以也不知道这书值不值得推荐。 基本都是照">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-04T07:59:55.126Z">
+<meta property="og:updated_time" content="2019-04-04T12:50:50.171Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java cheatsheet">
 <meta name="twitter:description" content="之前把web development入了个门，然后发现这行业其实挺难入门的= =。就当打了个基础算了，转身投入java怀抱。 作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵，不过还没读完所以也不知道这书值不值得推荐。 基本都是照">
@@ -337,7 +337,7 @@
                 
               
 
-              <time title="Created: 2019-04-04 14:43:32 / Modified: 15:59:55" itemprop="dateCreated datePublished" datetime="2019-04-04T14:43:32+08:00">2019-04-04</time>
+              <time title="Created: 2019-04-04 14:43:32 / Modified: 20:50:50" itemprop="dateCreated datePublished" datetime="2019-04-04T14:43:32+08:00">2019-04-04</time>
             
 
             
@@ -369,6 +369,19 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/04/04/java-cheatsheet/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/04/04/java-cheatsheet/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -470,6 +483,36 @@
 <h3 id="Converters"><a href="#Converters" class="headerlink" title="Converters"></a>Converters</h3><p><code>f</code> for floating point number<br><code>d</code> for integer<br><code>n</code> for newline<br><code>s</code> for string</p>
 <h3 id="Flags"><a href="#Flags" class="headerlink" title="Flags"></a>Flags</h3><p><code>%witdh_flag</code> = specify total width including decimal point, spaces will in front of the number to give the total width<br><code>%.</code> = specify decimal places<br><code>%,</code> = specify that a thousands spearator is used<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.printf(<span class="string">"%,.2f"</span>, <span class="number">12345.56789</span>) = <span class="number">12</span>,<span class="number">345.57</span>);</span><br></pre></td></tr></table></figure></p>
 <h2 id="Accepting-User-Input"><a href="#Accepting-User-Input" class="headerlink" title="Accepting User Input"></a>Accepting User Input</h2><p>The most common way is to use a Scanner object<br>to import scanner class<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner; <span class="comment">//to import scanner class</span></span><br><span class="line">Scanner reader = <span class="keyword">new</span> Scanner(System.in); <span class="comment">//to accept inputs from users</span></span><br><span class="line">typeOfData args = input.nextTypeOfData(); <span class="comment">//for different type of input</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="Control-Flow-Statements"><a href="#Control-Flow-Statements" class="headerlink" title="Control Flow Statements"></a>Control Flow Statements</h1><h2 id="Ternary-Operator"><a href="#Ternary-Operator" class="headerlink" title="Ternary Operator"></a>Ternary Operator</h2><ul>
+<li>syntax<br>  <code>condition ? value to return if condition is ture : value to return if condition is false</code></li>
+<li><p>example</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> myNum = <span class="number">3</span>&gt;<span class="number">2</span> ? <span class="number">10</span>:<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+<p>  myNum will be assigned the value 10;</p>
+</li>
+</ul>
+<h2 id="Switch-Statement"><a href="#Switch-Statement" class="headerlink" title="Switch Statement"></a>Switch Statement</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (varibale)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> case1:</span><br><span class="line">        <span class="keyword">do</span> A;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> case2:</span><br><span class="line">    <span class="keyword">case</span> case3:</span><br><span class="line">        <span class="keyword">do</span> B;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">do</span> C;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Looping-Statements"><a href="#Looping-Statements" class="headerlink" title="Looping Statements"></a>Looping Statements</h2><h3 id="For-Statement"><a href="#For-Statement" class="headerlink" title="For Statement"></a>For Statement</h3><ul>
+<li><p>Basic usage<br>Same as JS</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] myArray = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i =<span class="number">0</span>; i &lt; myArray.length; i++)</span><br><span class="line">&#123;</span><br><span class="line">    System.out.println(myArray[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Enhanced For statement</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] myArray = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> item: myArray)</span><br><span class="line">&#123;</span><br><span class="line">    System.out.println(item);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="While-Statement"><a href="#While-Statement" class="headerlink" title="While Statement"></a>While Statement</h3><ul>
+<li><p>Basic usage<br>Same as JS</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> counter = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">while</span> (counter &gt; <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">    System.out.println(<span class="string">"Counter = "</span> + counter);</span><br><span class="line">    counter -= <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Do-while Statement<br>Do one time before check for while condition</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> counter = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">"Counter = "</span> + counter);</span><br><span class="line">    counter++;</span><br><span class="line">&#125; <span class="keyword">while</span> (count &lt; <span class="number">0</span>);</span><br><span class="line"><span class="comment">//output will be Counter = 100</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Branching-Statements"><a href="#Branching-Statements" class="headerlink" title="Branching Statements"></a>Branching Statements</h2><p>Used to instructs the program to branch to another line of code</p>
+<ul>
+<li>Break Statement<br>  <code>break;</code> will end to loop</li>
+<li>Continue Statement<br>  rest of the loop after <code>continue;</code> is skipped for that time, then the loop will continue</li>
+</ul>
+<h2 id="Exception-Handling"><a href="#Exception-Handling" class="headerlink" title="Exception Handling"></a>Exception Handling</h2><p>Control of the flow when error occurs<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">do</span> something;   </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span> (type of error)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">do</span> somethingelse;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">finally</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">do</span> something_regardless_of_condtion;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -529,6 +572,13 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
 
   
 
@@ -634,7 +684,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips"><span class="nav-number">1.</span> <span class="nav-text">Tips</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables-and-Operators"><span class="nav-number">2.</span> <span class="nav-text">Variables and Operators</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Basic-data-types-predefined-Primitive-data-types"><span class="nav-number">2.1.</span> <span class="nav-text">8 Basic data types (predefined) / Primitive data types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Operators"><span class="nav-number">2.2.</span> <span class="nav-text">Basic Operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Type-Casting"><span class="nav-number">2.3.</span> <span class="nav-text">Type Casting</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Arrays-and-Strings"><span class="nav-number">3.</span> <span class="nav-text">Arrays and Strings</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#String-Methods"><span class="nav-number">3.1.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array"><span class="nav-number">3.2.</span> <span class="nav-text">Array</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-Methonds"><span class="nav-number">3.3.</span> <span class="nav-text">Array Methonds</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Type-vs-Reference-Type"><span class="nav-number">3.4.</span> <span class="nav-text">Primitive Type vs Reference Type</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Interactive-program"><span class="nav-number">4.</span> <span class="nav-text">Interactive program</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Escape-Sequences"><span class="nav-number">4.1.</span> <span class="nav-text">Escape Sequences</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Formatting-Outputs"><span class="nav-number">4.2.</span> <span class="nav-text">Formatting Outputs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Converters"><span class="nav-number">4.2.1.</span> <span class="nav-text">Converters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flags"><span class="nav-number">4.2.2.</span> <span class="nav-text">Flags</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Accepting-User-Input"><span class="nav-number">4.3.</span> <span class="nav-text">Accepting User Input</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips"><span class="nav-number">1.</span> <span class="nav-text">Tips</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables-and-Operators"><span class="nav-number">2.</span> <span class="nav-text">Variables and Operators</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Basic-data-types-predefined-Primitive-data-types"><span class="nav-number">2.1.</span> <span class="nav-text">8 Basic data types (predefined) / Primitive data types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Operators"><span class="nav-number">2.2.</span> <span class="nav-text">Basic Operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Type-Casting"><span class="nav-number">2.3.</span> <span class="nav-text">Type Casting</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Arrays-and-Strings"><span class="nav-number">3.</span> <span class="nav-text">Arrays and Strings</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#String-Methods"><span class="nav-number">3.1.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array"><span class="nav-number">3.2.</span> <span class="nav-text">Array</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-Methonds"><span class="nav-number">3.3.</span> <span class="nav-text">Array Methonds</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Type-vs-Reference-Type"><span class="nav-number">3.4.</span> <span class="nav-text">Primitive Type vs Reference Type</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Interactive-program"><span class="nav-number">4.</span> <span class="nav-text">Interactive program</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Escape-Sequences"><span class="nav-number">4.1.</span> <span class="nav-text">Escape Sequences</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Formatting-Outputs"><span class="nav-number">4.2.</span> <span class="nav-text">Formatting Outputs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Converters"><span class="nav-number">4.2.1.</span> <span class="nav-text">Converters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flags"><span class="nav-number">4.2.2.</span> <span class="nav-text">Flags</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Accepting-User-Input"><span class="nav-number">4.3.</span> <span class="nav-text">Accepting User Input</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Control-Flow-Statements"><span class="nav-number">5.</span> <span class="nav-text">Control Flow Statements</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ternary-Operator"><span class="nav-number">5.1.</span> <span class="nav-text">Ternary Operator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switch-Statement"><span class="nav-number">5.2.</span> <span class="nav-text">Switch Statement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Looping-Statements"><span class="nav-number">5.3.</span> <span class="nav-text">Looping Statements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#For-Statement"><span class="nav-number">5.3.1.</span> <span class="nav-text">For Statement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#While-Statement"><span class="nav-number">5.3.2.</span> <span class="nav-text">While Statement</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Branching-Statements"><span class="nav-number">5.4.</span> <span class="nav-text">Branching Statements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exception-Handling"><span class="nav-number">5.5.</span> <span class="nav-text">Exception Handling</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -797,6 +847,40 @@
 
 
   
+    <!-- LOCAL: You can save these files to your site and update links -->
+
+  
+  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitmint.browser.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
+<!-- END LOCAL -->
+
+<script>
+  function renderGitment() {
+    var gitment = new Gitmint({
+      id: window.location.pathname,
+      owner: 'rochaos',
+      repo: 'gitment-comments',
+      
+        lang: '' || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+      
+      oauth: {
+      
+      
+        client_secret: 'd8baa17ab590bdde6974b070db9e2ebc86e871f1',
+      
+        client_id: 'faea3ef85a012820a7e5'
+      }
+    });
+    gitment.render('gitment-container');
+  }
+
+  
+    renderGitment();
+  
+</script>
+
+  
 
 
   
@@ -833,5 +917,5 @@
   
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?bd2294fafea3389ee458f1d9be5a2157"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?bd2294fafea3389ee458f1d9be5a2157"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/kp31_310.model.json"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":false}});</script></body>
 </html>
