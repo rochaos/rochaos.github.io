@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="之前把web development入了个门，然后发现这行业其实挺难入门的= =。就当打了个基础算了，转身投入java怀抱。 作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵，不过还没读完所以也不知道这书值不值得推荐。 基本都是照">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-08T13:50:30.090Z">
+<meta property="og:updated_time" content="2019-04-09T15:11:44.999Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java cheatsheet (still updating)">
 <meta name="twitter:description" content="之前把web development入了个门，然后发现这行业其实挺难入门的= =。就当打了个基础算了，转身投入java怀抱。 作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵，不过还没读完所以也不知道这书值不值得推荐。 基本都是照">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-08 21:50:30" itemprop="dateModified" datetime="2019-04-08T21:50:30+08:00">2019-04-08</time>
+                <time title="Modified: 2019-04-09 23:11:44" itemprop="dateModified" datetime="2019-04-09T23:11:44+08:00">2019-04-09</time>
               
             
           </span>
@@ -503,10 +503,10 @@
 <h2 id="Switch-Statement"><a href="#Switch-Statement" class="headerlink" title="Switch Statement"></a>Switch Statement</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (varibale)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> case1:</span><br><span class="line">        <span class="keyword">do</span> A;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> case2:</span><br><span class="line">    <span class="keyword">case</span> case3:</span><br><span class="line">        <span class="keyword">do</span> B;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">do</span> C;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Looping-Statements"><a href="#Looping-Statements" class="headerlink" title="Looping Statements"></a>Looping Statements</h2><h3 id="For-Statement"><a href="#For-Statement" class="headerlink" title="For Statement"></a>For Statement</h3><ul>
 <li><p>Basic usage<br>Same as JS</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] myArray = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i =<span class="number">0</span>; i &lt; myArray.length; i++)</span><br><span class="line">&#123;</span><br><span class="line">    System.out.println(myArray[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] myArray = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;; <span class="comment">//int is type of data in array</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i =<span class="number">0</span>; i &lt; myArray.length; i++)</span><br><span class="line">&#123;</span><br><span class="line">    System.out.println(myArray[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Enhanced For statement</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] myArray = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> item: myArray)</span><br><span class="line">&#123;</span><br><span class="line">    System.out.println(item);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] myArray = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> args: myArray)</span><br><span class="line">&#123;</span><br><span class="line">    System.out.println(args);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="While-Statement"><a href="#While-Statement" class="headerlink" title="While Statement"></a>While Statement</h3><ul>
@@ -606,6 +606,154 @@
 <li>The line above method with <code>@</code> is known as annotation</li>
 <li><code>@Override</code> is optional for overriding, but can prevent compilation errors</li>
 <li>Annotations are case sensitive, fill list of predefined annotaions<br>  <a href="https://docs.oracle.com/javase/tutorial/java/annotations/predefined.html" target="_blank" rel="noopener">https://docs.oracle.com/javase/tutorial/java/annotations/predefined.html</a></li>
+</ul>
+<h2 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="Polymorphism"></a>Polymorphism</h2><ul>
+<li>Ability to use the correct method for an object based on its run-time type</li>
+<li>Example<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SuperClass[] arrayName = <span class="keyword">new</span> SuperClass[length]; <span class="comment">//call constracor with array</span></span><br><span class="line"></span><br><span class="line">arrayName[<span class="number">0</span>] = <span class="keyword">new</span> SubClass1(args);</span><br><span class="line">arrayName[<span class="number">1</span>] = <span class="keyword">new</span> SubClass2(args); <span class="comment">//declare objects for different SubClass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (SuperClass i : arrayName)</span><br><span class="line">    i.doSomething(); <span class="comment">// let Java run the method for different SubClass</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Special-Classes-and-Methods"><a href="#Special-Classes-and-Methods" class="headerlink" title="Special Classes and Methods"></a>Special Classes and Methods</h2><h3 id="Abstract-Classes-and-Methods"><a href="#Abstract-Classes-and-Methods" class="headerlink" title="Abstract Classes and Methods"></a>Abstract Classes and Methods</h3><ul>
+<li>A special type of parent class</li>
+<li>Strickly to be a parent class and cannnot be instantiated</li>
+<li>Abstract methods have no body and can only exist in abstract classes</li>
+<li>Abstract methods must be implemented in the child class<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractClass</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">abstractMethod</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Interfaces"><a href="#Interfaces" class="headerlink" title="Interfaces"></a>Interfaces</h3><ul>
+<li>Also cannot be instantiated</li>
+<li>Must be implemented by classes or extended by other interfaces</li>
+<li>Can only contain abstract methods(no body methods) and constants(final fields) <strong>[JAVA 7]</strong></li>
+<li>All methods in interface ae implicitly <strong>public</strong></li>
+<li>All constrant values are implicity <strong>public, static and final</strong></li>
+<li>A class can only extend one abstract class but can implement multiple inferfaces</li>
+<li><p>A class that implements an interface <strong>must implement all the abstract methods</strong> in the interface</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> <span class="keyword">implements</span> <span class="title">MyInterface</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">someMethod</span><span class="params">()</span></span>&#123; <span class="comment">//implement the methods</span></span><br><span class="line">        <span class="comment">//codes</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">MyInterface</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">someMethod</span><span class="params">()</span></span>; <span class="comment">//no need abstract and public keyword</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">someStaticMethod</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//Static methods, use MyInterface.someStaticMethod() to call</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">someDefaultMethod</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//Default methods, use object.someDefaultMethod() to call</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Keyword <code>implements</code> is used to indicate the interface</p>
+</li>
+<li><code>static</code> and <code>default</code> methods are added since <strong>JAVA 8</strong>, cannot be override</li>
+</ul>
+<h2 id="Access-Modifiers-Revisited"><a href="#Access-Modifiers-Revisited" class="headerlink" title="Access Modifiers Revisited"></a>Access Modifiers Revisited</h2><ul>
+<li>If the access modifier is not stated, it will be <code>package-private</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Access Modifier</th>
+<th style="text-align:center">the same class</th>
+<th style="text-align:center">child class</th>
+<th style="text-align:center">normal class</th>
+<th style="text-align:center">child class from other package</th>
+<th style="text-align:center">class from another package</th>
+<th style="text-align:center">with getter method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">public</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">OK</td>
+</tr>
+<tr>
+<td style="text-align:center">protected</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">NOPE</td>
+<td style="text-align:center">OK</td>
+</tr>
+<tr>
+<td style="text-align:center">package-private</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">NOPE</td>
+<td style="text-align:center">NOPE</td>
+<td style="text-align:center">OK</td>
+</tr>
+<tr>
+<td style="text-align:center">private</td>
+<td style="text-align:center">OK</td>
+<td style="text-align:center">NOPE</td>
+<td style="text-align:center">NOPE</td>
+<td style="text-align:center">NOPE</td>
+<td style="text-align:center">NOPE</td>
+<td style="text-align:center">OK</td>
+</tr>
+</tbody>
+</table>
+<h1 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h1><p>A type of framework provided by Java to easily store and manipulate objects</p>
+<h2 id="The-Java-Collections-Framework"><a href="#The-Java-Collections-Framework" class="headerlink" title="The Java Collections Framework"></a>The Java Collections Framework</h2><ul>
+<li>A set of pre-written classes and interfaces</li>
+<li>Standardizs the way in which groups of objects are handled</li>
+<li>Can only store objects<h2 id="Autoboxing-and-Unboxing"><a href="#Autoboxing-and-Unboxing" class="headerlink" title="Autoboxing and Unboxing"></a>Autoboxing and Unboxing</h2></li>
+<li>The 8 primitive types are not objects, so ofentimes need to be convert into an object</li>
+<li>Wrapper classes are provided</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Primitive data</th>
+<th style="text-align:center">boolean</th>
+<th style="text-align:center">char</th>
+<th style="text-align:center">byte</th>
+<th style="text-align:center">short</th>
+<th style="text-align:center">int</th>
+<th style="text-align:center">long</th>
+<th style="text-align:center">float</th>
+<th style="text-align:center">double</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Wrapper class</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">Character</td>
+<td style="text-align:center">Byte</td>
+<td style="text-align:center">Short</td>
+<td style="text-align:center">Integer</td>
+<td style="text-align:center">Long</td>
+<td style="text-align:center">Float</td>
+<td style="text-align:center">Double</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>To convert primitive data into object<br>  <code>Integer intObject = new Integer(100)</code></li>
+<li>To conver object back to primitive data<br>  <code>int m = intObject.intValue()</code></li>
+<li>With autoboxing and unboxing, covert can be simplified as<br>  <code>Integer intObject = 100</code> and <code>int m = intObject</code></li>
+<li>To conver string to primitive data<br>  <code>int n = Integer.parseInt(&quot;5&quot;)</code> or <code>double q = Double.parseDouble(&quot;5.1&quot;)</code></li>
+</ul>
+<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p>Similar to array, but the size can be changed</p>
+<h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><ul>
+<li>Can only store objects</li>
+<li>Need to <code>import java.util.ArrayList</code> before use</li>
+<li>Declaring and instantiating <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;Type&gt; nameOfArrayList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"><span class="comment">//or use List if import java.util.List</span></span><br><span class="line">List&lt;Type&gt; nameOfArrayList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="ArrayList-Methods"><a href="#ArrayList-Methods" class="headerlink" title="ArrayList Methods"></a>ArrayList Methods</h3><p>The following methods are pre-written, typical usage will be <code>nameOfArrayList.method()</code></p>
+<ul>
+<li><code>.add(data)</code>, to add members to a list<ul>
+<li><code>.add(index, data)</code> to add data at specific position</li>
+</ul>
+</li>
+<li><code>.set(index, data)</code> to replace data at specific position</li>
+<li><code>.remove(index)</code> to remove data at specific position</li>
+<li><code>.get(index)</code> to get data at specific position</li>
+<li><code>.size()</code> to get the number of elements in the list</li>
+<li><code>.contains(data)</code> to check if list contains the data, will return true / false</li>
+<li><code>.indexOf(data)</code> to get the index of the <strong>first</strong> occurrence of an element<br>  will return -1 if element does not exist</li>
+<li><p><code>.toArray()</code> returns an array of object containing all the elements, from first to last element</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Object[] myArray = nameOfArrayList.toArray();</span><br><span class="line"><span class="comment">//to return a specific type of array</span></span><br><span class="line">Integer[] myIntArray = nameOfArrayList.toArray(<span class="keyword">new</span> Integer[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>.clear()</code> to remove all items in a list</p>
+</li>
+<li>Complete list of all the ArrayList methods at <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html" target="_blank" rel="noopener">https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html</a></li>
 </ul>
 
       
@@ -777,7 +925,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips"><span class="nav-number">1.</span> <span class="nav-text">Tips</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Baisc-Structure-from-my-current-understanding"><span class="nav-number">2.</span> <span class="nav-text">Baisc Structure (from my current understanding)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables-and-Operators"><span class="nav-number">3.</span> <span class="nav-text">Variables and Operators</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Basic-data-types-predefined-Primitive-data-types"><span class="nav-number">3.1.</span> <span class="nav-text">8 Basic data types (predefined) / Primitive data types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Operators"><span class="nav-number">3.2.</span> <span class="nav-text">Basic Operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Type-Casting"><span class="nav-number">3.3.</span> <span class="nav-text">Type Casting</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Arrays-and-Strings"><span class="nav-number">4.</span> <span class="nav-text">Arrays and Strings</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#String-Methods"><span class="nav-number">4.1.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array"><span class="nav-number">4.2.</span> <span class="nav-text">Array</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-Methonds"><span class="nav-number">4.3.</span> <span class="nav-text">Array Methonds</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Type-vs-Reference-Type"><span class="nav-number">4.4.</span> <span class="nav-text">Primitive Type vs Reference Type</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Interactive-program"><span class="nav-number">5.</span> <span class="nav-text">Interactive program</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Escape-Sequences"><span class="nav-number">5.1.</span> <span class="nav-text">Escape Sequences</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Formatting-Outputs"><span class="nav-number">5.2.</span> <span class="nav-text">Formatting Outputs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Converters"><span class="nav-number">5.2.1.</span> <span class="nav-text">Converters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flags"><span class="nav-number">5.2.2.</span> <span class="nav-text">Flags</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Accepting-User-Input"><span class="nav-number">5.3.</span> <span class="nav-text">Accepting User Input</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Control-Flow-Statements"><span class="nav-number">6.</span> <span class="nav-text">Control Flow Statements</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ternary-Operator"><span class="nav-number">6.1.</span> <span class="nav-text">Ternary Operator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switch-Statement"><span class="nav-number">6.2.</span> <span class="nav-text">Switch Statement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Looping-Statements"><span class="nav-number">6.3.</span> <span class="nav-text">Looping Statements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#For-Statement"><span class="nav-number">6.3.1.</span> <span class="nav-text">For Statement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#While-Statement"><span class="nav-number">6.3.2.</span> <span class="nav-text">While Statement</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Branching-Statements"><span class="nav-number">6.4.</span> <span class="nav-text">Branching Statements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exception-Handling"><span class="nav-number">6.5.</span> <span class="nav-text">Exception Handling</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-Oriented-Programming-I"><span class="nav-number">7.</span> <span class="nav-text">Object Oriented Programming I</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Writing-our-own-class"><span class="nav-number">7.1.</span> <span class="nav-text">Writing our own class</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Fields"><span class="nav-number">7.1.1.</span> <span class="nav-text">Fields</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Methods"><span class="nav-number">7.1.2.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Constructors"><span class="nav-number">7.1.3.</span> <span class="nav-text">Constructors</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Instantiating-an-Object"><span class="nav-number">7.2.</span> <span class="nav-text">Instantiating an Object</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Static"><span class="nav-number">7.3.</span> <span class="nav-text">Static</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Advanced-Methods"><span class="nav-number">7.4.</span> <span class="nav-text">Advanced Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Useing-Arrays-in-Method-reference-data-type"><span class="nav-number">7.4.1.</span> <span class="nav-text">Useing Arrays in Method (reference data type)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Passing-Primitive-vs-Reference-Type-Parameters"><span class="nav-number">7.4.2.</span> <span class="nav-text">Passing Primitive vs Reference Type Parameters</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-Oriented-Programming-II"><span class="nav-number">8.</span> <span class="nav-text">Object-Oriented Programming II</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Inheritance"><span class="nav-number">8.1.</span> <span class="nav-text">Inheritance</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Inherit"><span class="nav-number">8.1.1.</span> <span class="nav-text">Basic Inherit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Overriding-a-method"><span class="nav-number">8.1.2.</span> <span class="nav-text">Overriding a method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Annotations"><span class="nav-number">8.1.3.</span> <span class="nav-text">Annotations</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips"><span class="nav-number">1.</span> <span class="nav-text">Tips</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Baisc-Structure-from-my-current-understanding"><span class="nav-number">2.</span> <span class="nav-text">Baisc Structure (from my current understanding)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables-and-Operators"><span class="nav-number">3.</span> <span class="nav-text">Variables and Operators</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Basic-data-types-predefined-Primitive-data-types"><span class="nav-number">3.1.</span> <span class="nav-text">8 Basic data types (predefined) / Primitive data types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Operators"><span class="nav-number">3.2.</span> <span class="nav-text">Basic Operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Type-Casting"><span class="nav-number">3.3.</span> <span class="nav-text">Type Casting</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Arrays-and-Strings"><span class="nav-number">4.</span> <span class="nav-text">Arrays and Strings</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#String-Methods"><span class="nav-number">4.1.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array"><span class="nav-number">4.2.</span> <span class="nav-text">Array</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-Methonds"><span class="nav-number">4.3.</span> <span class="nav-text">Array Methonds</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Type-vs-Reference-Type"><span class="nav-number">4.4.</span> <span class="nav-text">Primitive Type vs Reference Type</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Interactive-program"><span class="nav-number">5.</span> <span class="nav-text">Interactive program</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Escape-Sequences"><span class="nav-number">5.1.</span> <span class="nav-text">Escape Sequences</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Formatting-Outputs"><span class="nav-number">5.2.</span> <span class="nav-text">Formatting Outputs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Converters"><span class="nav-number">5.2.1.</span> <span class="nav-text">Converters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flags"><span class="nav-number">5.2.2.</span> <span class="nav-text">Flags</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Accepting-User-Input"><span class="nav-number">5.3.</span> <span class="nav-text">Accepting User Input</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Control-Flow-Statements"><span class="nav-number">6.</span> <span class="nav-text">Control Flow Statements</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ternary-Operator"><span class="nav-number">6.1.</span> <span class="nav-text">Ternary Operator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switch-Statement"><span class="nav-number">6.2.</span> <span class="nav-text">Switch Statement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Looping-Statements"><span class="nav-number">6.3.</span> <span class="nav-text">Looping Statements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#For-Statement"><span class="nav-number">6.3.1.</span> <span class="nav-text">For Statement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#While-Statement"><span class="nav-number">6.3.2.</span> <span class="nav-text">While Statement</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Branching-Statements"><span class="nav-number">6.4.</span> <span class="nav-text">Branching Statements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exception-Handling"><span class="nav-number">6.5.</span> <span class="nav-text">Exception Handling</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-Oriented-Programming-I"><span class="nav-number">7.</span> <span class="nav-text">Object Oriented Programming I</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Writing-our-own-class"><span class="nav-number">7.1.</span> <span class="nav-text">Writing our own class</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Fields"><span class="nav-number">7.1.1.</span> <span class="nav-text">Fields</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Methods"><span class="nav-number">7.1.2.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Constructors"><span class="nav-number">7.1.3.</span> <span class="nav-text">Constructors</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Instantiating-an-Object"><span class="nav-number">7.2.</span> <span class="nav-text">Instantiating an Object</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Static"><span class="nav-number">7.3.</span> <span class="nav-text">Static</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Advanced-Methods"><span class="nav-number">7.4.</span> <span class="nav-text">Advanced Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Useing-Arrays-in-Method-reference-data-type"><span class="nav-number">7.4.1.</span> <span class="nav-text">Useing Arrays in Method (reference data type)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Passing-Primitive-vs-Reference-Type-Parameters"><span class="nav-number">7.4.2.</span> <span class="nav-text">Passing Primitive vs Reference Type Parameters</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-Oriented-Programming-II"><span class="nav-number">8.</span> <span class="nav-text">Object-Oriented Programming II</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Inheritance"><span class="nav-number">8.1.</span> <span class="nav-text">Inheritance</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Inherit"><span class="nav-number">8.1.1.</span> <span class="nav-text">Basic Inherit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Overriding-a-method"><span class="nav-number">8.1.2.</span> <span class="nav-text">Overriding a method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Annotations"><span class="nav-number">8.1.3.</span> <span class="nav-text">Annotations</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polymorphism"><span class="nav-number">8.2.</span> <span class="nav-text">Polymorphism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Special-Classes-and-Methods"><span class="nav-number">8.3.</span> <span class="nav-text">Special Classes and Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Abstract-Classes-and-Methods"><span class="nav-number">8.3.1.</span> <span class="nav-text">Abstract Classes and Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Interfaces"><span class="nav-number">8.3.2.</span> <span class="nav-text">Interfaces</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Access-Modifiers-Revisited"><span class="nav-number">8.4.</span> <span class="nav-text">Access Modifiers Revisited</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Collections"><span class="nav-number">9.</span> <span class="nav-text">Collections</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Java-Collections-Framework"><span class="nav-number">9.1.</span> <span class="nav-text">The Java Collections Framework</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Autoboxing-and-Unboxing"><span class="nav-number">9.2.</span> <span class="nav-text">Autoboxing and Unboxing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List"><span class="nav-number">9.3.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList"><span class="nav-number">9.4.</span> <span class="nav-text">ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList-Methods"><span class="nav-number">9.4.1.</span> <span class="nav-text">ArrayList Methods</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
