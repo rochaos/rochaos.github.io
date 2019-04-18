@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="读完入门书，算是打了个基础，于是开始跟Udemy上评价不错的一个”Java Programming MasterClass for Software Developers”, 预计20天左右学完，此文用意为学习笔记,毕业为止长期更新。因为基础部分和之前读的”learn Java in one day”是几乎一致的，所以仅记录书中没提到过的一些小细节。顺便非常想吐槽这讲师的口音，简直有种含着口球在上">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-16T12:18:51.043Z">
+<meta property="og:updated_time" content="2019-04-18T15:58:16.254Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Notes for &quot;Java Programming Masterclass&quot;">
 <meta name="twitter:description" content="读完入门书，算是打了个基础，于是开始跟Udemy上评价不错的一个”Java Programming MasterClass for Software Developers”, 预计20天左右学完，此文用意为学习笔记,毕业为止长期更新。因为基础部分和之前读的”learn Java in one day”是几乎一致的，所以仅记录书中没提到过的一些小细节。顺便非常想吐槽这讲师的口音，简直有种含着口球在上">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-16 20:18:51" itemprop="dateModified" datetime="2019-04-16T20:18:51+08:00">2019-04-16</time>
+                <time title="Modified: 2019-04-18 23:58:16" itemprop="dateModified" datetime="2019-04-18T23:58:16+08:00">2019-04-18</time>
               
             
           </span>
@@ -447,6 +447,20 @@
 </ul>
 <h1 id="Keywords-and-Expressions"><a href="#Keywords-and-Expressions" class="headerlink" title="Keywords and Expressions"></a>Keywords and Expressions</h1><ul>
 <li>List of keywords can be found at <a href="https://en.wikipedia.org/wiki/List_of_Java_keywords" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/List_of_Java_keywords</a></li>
+</ul>
+<h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><ul>
+<li><code>Math.round()</code> can be used to round a number, will return long type number</li>
+<li><p>A way to compare first n decimal points of double/float is use narrow casting</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> x = <span class="number">3.1458</span>; <span class="keyword">double</span> y = <span class="number">3.1452</span>;</span><br><span class="line"><span class="keyword">int</span> a = (<span class="keyword">int</span>) (x * <span class="number">1000</span>); <span class="keyword">int</span> b = (<span class="keyword">int</span>) (y * <span class="number">1000</span>);</span><br><span class="line"><span class="comment">// a = b = 3145, thus first 3 decimal points of x = y</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Methods overloading doesn’t apply on same parameters with different return type</p>
+</li>
+<li>To conver a Integer to String<ul>
+<li><code>String str = Integer.toString(int)</code></li>
+<li>Or can directly String str = int + “String”, JAVA will auto treat result as String</li>
+</ul>
+</li>
+<li>To apply a format in println instead of use printf<br>  <code>System.out.println(String.format(&quot;format_specifiers&quot;, data))</code></li>
 </ul>
 
       
@@ -618,7 +632,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Envrionment"><span class="nav-number">1.</span> <span class="nav-text">Envrionment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables"><span class="nav-number">2.</span> <span class="nav-text">Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Data-Types"><span class="nav-number">2.1.</span> <span class="nav-text">Primitive Data Types</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Operator"><span class="nav-number">3.</span> <span class="nav-text">Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Keywords-and-Expressions"><span class="nav-number">4.</span> <span class="nav-text">Keywords and Expressions</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Envrionment"><span class="nav-number">1.</span> <span class="nav-text">Envrionment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables"><span class="nav-number">2.</span> <span class="nav-text">Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Data-Types"><span class="nav-number">2.1.</span> <span class="nav-text">Primitive Data Types</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Operator"><span class="nav-number">3.</span> <span class="nav-text">Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Keywords-and-Expressions"><span class="nav-number">4.</span> <span class="nav-text">Keywords and Expressions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Methods"><span class="nav-number">5.</span> <span class="nav-text">Methods</span></a></li></ol></div>
             
 
           </div>
