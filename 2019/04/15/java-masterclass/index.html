@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="读完入门书，算是打了个基础，于是开始跟Udemy上评价不错的一个”Java Programming MasterClass for Software Developers”, 预计20天左右学完，此文用意为学习笔记,毕业为止长期更新。因为基础部分和之前读的”learn Java in one day”是几乎一致的，所以仅记录书中没提到过的一些小细节。顺便非常想吐槽这讲师的口音，简直有种含着口球在上">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-19T13:34:12.948Z">
+<meta property="og:updated_time" content="2019-04-20T14:15:57.332Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Notes for &quot;Java Programming Masterclass&quot;">
 <meta name="twitter:description" content="读完入门书，算是打了个基础，于是开始跟Udemy上评价不错的一个”Java Programming MasterClass for Software Developers”, 预计20天左右学完，此文用意为学习笔记,毕业为止长期更新。因为基础部分和之前读的”learn Java in one day”是几乎一致的，所以仅记录书中没提到过的一些小细节。顺便非常想吐槽这讲师的口音，简直有种含着口球在上">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-19 21:34:12" itemprop="dateModified" datetime="2019-04-19T21:34:12+08:00">2019-04-19</time>
+                <time title="Modified: 2019-04-20 22:15:57" itemprop="dateModified" datetime="2019-04-20T22:15:57+08:00">2019-04-20</time>
               
             
           </span>
@@ -450,6 +450,11 @@
 </ul>
 <h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><ul>
 <li><code>Math.round()</code> can be used to round a number, will return long type number</li>
+<li><code>Math.ceil()</code> to return the smallest double that is larger than the number (123.3 -&gt; 124.0)</li>
+<li>int / int will alway give int, to avoid that<ul>
+<li>Use <code>double = (double)int / int</code> to get a double result, but cannot use <code>(double)(int / int)</code> as JAVA will cal the () first.</li>
+</ul>
+</li>
 <li><p>A way to compare first n decimal points of double/float is use narrow casting</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> x = <span class="number">3.1458</span>; <span class="keyword">double</span> y = <span class="number">3.1452</span>;</span><br><span class="line"><span class="keyword">int</span> a = (<span class="keyword">int</span>) (x * <span class="number">1000</span>); <span class="keyword">int</span> b = (<span class="keyword">int</span>) (y * <span class="number">1000</span>);</span><br><span class="line"><span class="comment">// a = b = 3145, thus first 3 decimal points of x = y</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -465,6 +470,7 @@
 <li>If newline is required in printf, it shall be within the format_specifiers,eg. <code>&quot;\n %.2f \n&quot;</code></li>
 </ul>
 </li>
+<li>To check if a String is empty, can use <code>.isEmpty()</code> , return true for empty String</li>
 </ul>
 <h1 id="For-and-While-Statement"><a href="#For-and-While-Statement" class="headerlink" title="For and While Statement"></a>For and While Statement</h1><ul>
 <li>For PrimeNumberChecker, as any number that can be treated as x * y shall have x or y &lt;= sqrt(n)<ul>
@@ -479,6 +485,24 @@
 </ul>
 <h1 id="If-statement"><a href="#If-statement" class="headerlink" title="If statement"></a>If statement</h1><ul>
 <li>If return type is boolean, can be simplified as <code>return (condition)</code></li>
+</ul>
+<h1 id="Read-Input"><a href="#Read-Input" class="headerlink" title="Read Input"></a>Read Input</h1><ul>
+<li>To avoid invalid type of input<ul>
+<li>try-catch method</li>
+<li><code>reader.hasNextInt()</code>, will return true if input is Int</li>
+</ul>
+</li>
+<li>To persent max / min of a data object (Integer / Double / …)<ul>
+<li><code>Object.MIN_VALUE</code> and <code>Object.MAX_VALUE</code></li>
+</ul>
+</li>
+</ul>
+<p>#OOP</p>
+<ul>
+<li>For getter and setter methods, to avoid err with same name parameters, can use keyword <code>this</code><ul>
+<li><code>public void setName(Sring name){ this.name = name; }</code></li>
+</ul>
+</li>
 </ul>
 
       
@@ -520,8 +544,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/19/java-methods/" rel="prev" title="Record sheet of basic Java methods">
-                Record sheet of basic Java methods <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/19/java-coding-exercise/" rel="prev" title="Record Sheet of Methods Coding Exercises">
+                Record Sheet of Methods Coding Exercises <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -654,7 +678,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Envrionment"><span class="nav-number">1.</span> <span class="nav-text">Envrionment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables"><span class="nav-number">2.</span> <span class="nav-text">Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Data-Types"><span class="nav-number">2.1.</span> <span class="nav-text">Primitive Data Types</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Operator"><span class="nav-number">3.</span> <span class="nav-text">Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Keywords-and-Expressions"><span class="nav-number">4.</span> <span class="nav-text">Keywords and Expressions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Methods"><span class="nav-number">5.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#For-and-While-Statement"><span class="nav-number">6.</span> <span class="nav-text">For and While Statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#If-statement"><span class="nav-number">7.</span> <span class="nav-text">If statement</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Envrionment"><span class="nav-number">1.</span> <span class="nav-text">Envrionment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables"><span class="nav-number">2.</span> <span class="nav-text">Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Data-Types"><span class="nav-number">2.1.</span> <span class="nav-text">Primitive Data Types</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Operator"><span class="nav-number">3.</span> <span class="nav-text">Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Keywords-and-Expressions"><span class="nav-number">4.</span> <span class="nav-text">Keywords and Expressions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Methods"><span class="nav-number">5.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#For-and-While-Statement"><span class="nav-number">6.</span> <span class="nav-text">For and While Statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#If-statement"><span class="nav-number">7.</span> <span class="nav-text">If statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Read-Input"><span class="nav-number">8.</span> <span class="nav-text">Read Input</span></a></li></ol></div>
             
 
           </div>
