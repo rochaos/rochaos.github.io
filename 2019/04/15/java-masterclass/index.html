@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="读完入门书，算是打了个基础，于是开始跟Udemy上评价不错的一个”Java Programming MasterClass for Software Developers”, 预计20天左右学完，此文用意为学习笔记,毕业为止长期更新。因为基础部分和之前读的”learn Java in one day”是几乎一致的，所以仅记录书中没提到过的一些小细节。顺便非常想吐槽这讲师的口音，简直有种含着口球在上">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-21T15:02:01.777Z">
+<meta property="og:updated_time" content="2019-04-23T14:41:19.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Notes for &quot;Java Programming Masterclass&quot;">
 <meta name="twitter:description" content="读完入门书，算是打了个基础，于是开始跟Udemy上评价不错的一个”Java Programming MasterClass for Software Developers”, 预计20天左右学完，此文用意为学习笔记,毕业为止长期更新。因为基础部分和之前读的”learn Java in one day”是几乎一致的，所以仅记录书中没提到过的一些小细节。顺便非常想吐槽这讲师的口音，简直有种含着口球在上">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-21 23:02:01" itemprop="dateModified" datetime="2019-04-21T23:02:01+08:00">2019-04-21</time>
+                <time title="Modified: 2019-04-23 22:41:19" itemprop="dateModified" datetime="2019-04-23T22:41:19+08:00">2019-04-23</time>
               
             
           </span>
@@ -508,6 +508,23 @@
 </li>
 </ul>
 </li>
+<li><p>Static Methods vs Instance Methods</p>
+<ul>
+<li>static methods can’t use instance variables</li>
+<li>static methods can be called directly</li>
+<li>instance shall be created before call the instance method</li>
+<li>If instance methods or any fields are used, shall use instance method</li>
+</ul>
+</li>
+<li><p>Static Variables vs Instance Variables</p>
+<ul>
+<li>static variables are shared between instances within the class<ul>
+<li>update static variable for current instance will also update the pervious instance </li>
+</ul>
+</li>
+<li>instance variables are fields or member variables, belong to an instance of a class</li>
+</ul>
+</li>
 <li><p>For getter and setter methods, to avoid err with same name parameters, can use keyword <code>this</code></p>
 <ul>
 <li><code>public void setName(Sring name){ this.name = name; }</code></li>
@@ -522,10 +539,31 @@
 </ul>
 </li>
 </ul>
-<p>##Inheritance</p>
-<ul>
-<li>keyword <code>super</code> point to the super class</li>
+<h2 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h2><ul>
+<li>keyword <code>super</code> point to the super class<ul>
+<li><code>super(parameters)</code> calls constructor from super class</li>
 </ul>
+</li>
+<li><code>super(parameters)</code> and <code>this(parameters)</code> have to be the first statement in a constructor<ul>
+<li>A constructor can not call both at same time</li>
+</ul>
+</li>
+<li><code>@Overriding</code> has some limites<ul>
+<li>Only applicable for methods in child classes (inherited methods)</li>
+<li>Must have same return type</li>
+<li>Constructors, static methods, private methods and final methods cannot be overriden</li>
+<li>Can’t have a lower access modifier (if parent method is protected, child cannot be private but can be public)</li>
+<li>Can’t throw a new or broader checked exception</li>
+</ul>
+</li>
+</ul>
+<h2 id="Composition"><a href="#Composition" class="headerlink" title="Composition"></a>Composition</h2><p>Creating objects within objects</p>
+<ul>
+<li>Create classes without extend, treate other classes as object data type in fileds and constructors</li>
+<li>To call methods in the related class, can use getter to access the class</li>
+<li>private class cannot be called </li>
+</ul>
+<h2 id="Encapsulation"><a href="#Encapsulation" class="headerlink" title="Encapsulation"></a>Encapsulation</h2><p>Use private fields + getter &amp; setter to protect the data</p>
 
       
     </div>
@@ -700,7 +738,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Envrionment"><span class="nav-number">1.</span> <span class="nav-text">Envrionment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables"><span class="nav-number">2.</span> <span class="nav-text">Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Data-Types"><span class="nav-number">2.1.</span> <span class="nav-text">Primitive Data Types</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Operator"><span class="nav-number">3.</span> <span class="nav-text">Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Keywords-and-Expressions"><span class="nav-number">4.</span> <span class="nav-text">Keywords and Expressions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Methods"><span class="nav-number">5.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#For-and-While-Statement"><span class="nav-number">6.</span> <span class="nav-text">For and While Statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#If-statement"><span class="nav-number">7.</span> <span class="nav-text">If statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Read-Input"><span class="nav-number">8.</span> <span class="nav-text">Read Input</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OOP"><span class="nav-number">9.</span> <span class="nav-text">OOP</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Envrionment"><span class="nav-number">1.</span> <span class="nav-text">Envrionment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables"><span class="nav-number">2.</span> <span class="nav-text">Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Data-Types"><span class="nav-number">2.1.</span> <span class="nav-text">Primitive Data Types</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Operator"><span class="nav-number">3.</span> <span class="nav-text">Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Keywords-and-Expressions"><span class="nav-number">4.</span> <span class="nav-text">Keywords and Expressions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Methods"><span class="nav-number">5.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#For-and-While-Statement"><span class="nav-number">6.</span> <span class="nav-text">For and While Statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#If-statement"><span class="nav-number">7.</span> <span class="nav-text">If statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Read-Input"><span class="nav-number">8.</span> <span class="nav-text">Read Input</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OOP"><span class="nav-number">9.</span> <span class="nav-text">OOP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Inheritance"><span class="nav-number">9.1.</span> <span class="nav-text">Inheritance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Composition"><span class="nav-number">9.2.</span> <span class="nav-text">Composition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Encapsulation"><span class="nav-number">9.3.</span> <span class="nav-text">Encapsulation</span></a></li></ol></li></ol></div>
             
 
           </div>
