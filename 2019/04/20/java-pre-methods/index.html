@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="Expected to be a useful reference document.Shall keep updating.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-25T13:34:19.894Z">
+<meta property="og:updated_time" content="2019-04-26T15:09:47.702Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Recording Sheet of Some Pre-written Methods">
 <meta name="twitter:description" content="Expected to be a useful reference document.Shall keep updating.">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-25 21:34:19" itemprop="dateModified" datetime="2019-04-25T21:34:19+08:00">2019-04-25</time>
+                <time title="Modified: 2019-04-26 23:09:47" itemprop="dateModified" datetime="2019-04-26T23:09:47+08:00">2019-04-26</time>
               
             
           </span>
@@ -440,6 +440,8 @@
 <li><code>Integer.toString(number)</code> to convert a number to String</li>
 <li><code>Integer.MAX_VALUE</code> to return the max value of the object</li>
 <li><code>Integer.MIN_VALUE</code> to return the min value of the object</li>
+<li><code>Integer.valueOf(number)</code> to return the Integer type of int (unnecessary with autoboxing)</li>
+<li><code>Integer.intValue()</code> to return the int of Integer (unnecessary with unboxing)</li>
 <li><code>String.format(&quot;format_specifiers&quot;, data)</code> to teturn the data with format as String</li>
 </ul>
 <h1 id="Array-Methods"><a href="#Array-Methods" class="headerlink" title="Array Methods"></a>Array Methods</h1><p>import before use <code>import java.util.Arrays;</code></p>
@@ -457,6 +459,31 @@
         * `.getSuperclass()` to return the super class name
         * `.getSimpleName()` to return the simple name 
 </code></pre></li>
+</ul>
+<h1 id="ArrayList-Methods"><a href="#ArrayList-Methods" class="headerlink" title="ArrayList Methods"></a>ArrayList Methods</h1><p>The following methods are pre-written, typical usage will be <code>nameOfArrayList.method()</code></p>
+<ul>
+<li><code>.add(data)</code>, to add members to a list<ul>
+<li><code>.add(index, data)</code> to add data at specific position</li>
+</ul>
+</li>
+<li><code>.addAll(arraylist)</code> to copy from the whole arraylist</li>
+<li><code>.set(index, data)</code> to replace data at specific position</li>
+<li><code>.remove(index)</code> to remove data at specific position</li>
+<li><code>.get(index)</code> to get data at specific position</li>
+<li><code>.size()</code> to get the number of elements in the list</li>
+<li><code>.contains(data)</code> to check if list contains the data, will return true / false</li>
+<li><code>.indexOf(data)</code> to get the index of the <strong>first</strong> occurrence of an element, will return -1 if element does not exist</li>
+<li><code>.toArray()</code> returns an array of <strong>object</strong> containing all the elements, from first to last element<pre><code>* to pass the data to an array, use `.toArray(arrayName)`
+</code></pre></li>
+<li><code>.toString()</code> return the value of the arraylist as an array</li>
+</ul>
+<h1 id="LinkedList-Methods"><a href="#LinkedList-Methods" class="headerlink" title="LinkedList Methods"></a>LinkedList Methods</h1><p>Share most methods of ArrayList Methods, but have queue and deque interfaces with following methods</p>
+<ul>
+<li><code>.pull()</code> return the first element (head) and remove it from the list</li>
+<li><code>.peek()</code> return the first element, will return null for empty list</li>
+<li><code>.getFirst()</code>  return the first element, will give NoSuchElementException for empty list</li>
+<li><code>.getLast()</code> return the last element, will give NoSuchElementExcepetion for empty list</li>
+<li>Complete list of all LinkedList methods at <a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank" rel="noopener">https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html</a></li>
 </ul>
 
       
@@ -628,7 +655,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#String-Methods"><span class="nav-number">1.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Math-Methods"><span class="nav-number">2.</span> <span class="nav-text">Math Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Integer-Methods"><span class="nav-number">3.</span> <span class="nav-text">Integer Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Array-Methods"><span class="nav-number">4.</span> <span class="nav-text">Array Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Class-Methods"><span class="nav-number">5.</span> <span class="nav-text">Class Methods</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#String-Methods"><span class="nav-number">1.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Math-Methods"><span class="nav-number">2.</span> <span class="nav-text">Math Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Integer-Methods"><span class="nav-number">3.</span> <span class="nav-text">Integer Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Array-Methods"><span class="nav-number">4.</span> <span class="nav-text">Array Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Class-Methods"><span class="nav-number">5.</span> <span class="nav-text">Class Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ArrayList-Methods"><span class="nav-number">6.</span> <span class="nav-text">ArrayList Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LinkedList-Methods"><span class="nav-number">7.</span> <span class="nav-text">LinkedList Methods</span></a></li></ol></div>
             
 
           </div>

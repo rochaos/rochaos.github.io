@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="读完入门书，算是打了个基础，于是开始跟Udemy上评价不错的一个”Java Programming MasterClass for Software Developers”, 预计20天左右学完，此文用意为学习笔记,毕业为止长期更新。因为基础部分和之前读的”learn Java in one day”是几乎一致的，所以仅记录书中没提到过的一些小细节。顺便非常想吐槽这讲师的口音，简直有种含着口球在上">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-25T15:10:43.226Z">
+<meta property="og:updated_time" content="2019-04-26T12:15:49.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Notes for &quot;Java Programming Masterclass&quot;">
 <meta name="twitter:description" content="读完入门书，算是打了个基础，于是开始跟Udemy上评价不错的一个”Java Programming MasterClass for Software Developers”, 预计20天左右学完，此文用意为学习笔记,毕业为止长期更新。因为基础部分和之前读的”learn Java in one day”是几乎一致的，所以仅记录书中没提到过的一些小细节。顺便非常想吐槽这讲师的口音，简直有种含着口球在上">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-25 23:10:43" itemprop="dateModified" datetime="2019-04-25T23:10:43+08:00">2019-04-25</time>
+                <time title="Modified: 2019-04-26 20:15:49" itemprop="dateModified" datetime="2019-04-26T20:15:49+08:00">2019-04-26</time>
               
             
           </span>
@@ -584,6 +584,24 @@
 <li><code>new</code> will dereference the reference to another address.</li>
 <li>Dereference parameter in a method will not modify the original reference.</li>
 </ul>
+<h1 id="List"><a href="#List" class="headerlink" title="List"></a>List</h1><h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><ul>
+<li>A new arraylist can be created by <code>ArrayList&lt;type of data&gt; nameOfArray = new ArrayList&lt;&gt;()</code><ul>
+<li>A shortcut is <code>= new ArrayList&lt;type of data&gt;(an arraylist to copy data from)</code></li>
+</ul>
+</li>
+<li>To convert an ArrayList to a normal array<ul>
+<li><ol>
+<li>Create an normal array with size of the arrayList</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>arraylist.toArray(arrayname)</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>To declare and add custom object types<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        ArrayList&lt;CustomClass&gt; customArrayList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        customArrayList.add(<span class="keyword">new</span> CustomClass(arguments));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Class CustomClass &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> myValue;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CustomClass</span><span class="params">(<span class="keyword">int</span> number)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.myValue = number;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
@@ -758,7 +776,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Envrionment"><span class="nav-number">1.</span> <span class="nav-text">Envrionment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables"><span class="nav-number">2.</span> <span class="nav-text">Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Data-Types"><span class="nav-number">2.1.</span> <span class="nav-text">Primitive Data Types</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Operator"><span class="nav-number">3.</span> <span class="nav-text">Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Keywords-and-Expressions"><span class="nav-number">4.</span> <span class="nav-text">Keywords and Expressions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Methods"><span class="nav-number">5.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#For-and-While-Statement"><span class="nav-number">6.</span> <span class="nav-text">For and While Statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#If-statement"><span class="nav-number">7.</span> <span class="nav-text">If statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Read-Input"><span class="nav-number">8.</span> <span class="nav-text">Read Input</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OOP"><span class="nav-number">9.</span> <span class="nav-text">OOP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Inheritance"><span class="nav-number">9.1.</span> <span class="nav-text">Inheritance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Composition"><span class="nav-number">9.2.</span> <span class="nav-text">Composition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Encapsulation"><span class="nav-number">9.3.</span> <span class="nav-text">Encapsulation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polymorphism"><span class="nav-number">9.4.</span> <span class="nav-text">Polymorphism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References-Type"><span class="nav-number">9.5.</span> <span class="nav-text">References Type</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Envrionment"><span class="nav-number">1.</span> <span class="nav-text">Envrionment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables"><span class="nav-number">2.</span> <span class="nav-text">Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Data-Types"><span class="nav-number">2.1.</span> <span class="nav-text">Primitive Data Types</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Operator"><span class="nav-number">3.</span> <span class="nav-text">Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Keywords-and-Expressions"><span class="nav-number">4.</span> <span class="nav-text">Keywords and Expressions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Methods"><span class="nav-number">5.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#For-and-While-Statement"><span class="nav-number">6.</span> <span class="nav-text">For and While Statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#If-statement"><span class="nav-number">7.</span> <span class="nav-text">If statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Read-Input"><span class="nav-number">8.</span> <span class="nav-text">Read Input</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OOP"><span class="nav-number">9.</span> <span class="nav-text">OOP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Inheritance"><span class="nav-number">9.1.</span> <span class="nav-text">Inheritance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Composition"><span class="nav-number">9.2.</span> <span class="nav-text">Composition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Encapsulation"><span class="nav-number">9.3.</span> <span class="nav-text">Encapsulation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polymorphism"><span class="nav-number">9.4.</span> <span class="nav-text">Polymorphism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References-Type"><span class="nav-number">9.5.</span> <span class="nav-text">References Type</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#List"><span class="nav-number">10.</span> <span class="nav-text">List</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList"><span class="nav-number">10.1.</span> <span class="nav-text">ArrayList</span></a></li></ol></li></ol></div>
             
 
           </div>
