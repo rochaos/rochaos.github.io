@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="Expected to be a useful reference document.Shall keep updating.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-26T15:09:47.702Z">
+<meta property="og:updated_time" content="2019-04-27T07:45:54.338Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Recording Sheet of Some Pre-written Methods">
 <meta name="twitter:description" content="Expected to be a useful reference document.Shall keep updating.">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-26 23:09:47" itemprop="dateModified" datetime="2019-04-26T23:09:47+08:00">2019-04-26</time>
+                <time title="Modified: 2019-04-27 15:45:54" itemprop="dateModified" datetime="2019-04-27T15:45:54+08:00">2019-04-27</time>
               
             
           </span>
@@ -444,6 +444,9 @@
 <li><code>Integer.intValue()</code> to return the int of Integer (unnecessary with unboxing)</li>
 <li><code>String.format(&quot;format_specifiers&quot;, data)</code> to teturn the data with format as String</li>
 </ul>
+<h1 id="Object-Methods"><a href="#Object-Methods" class="headerlink" title="Object Methods"></a>Object Methods</h1><ul>
+<li><code>.compareTo(object)</code> will return a negative integer, zero, or positive integer as the object is less than, equal to, or greater than the specified object</li>
+</ul>
 <h1 id="Array-Methods"><a href="#Array-Methods" class="headerlink" title="Array Methods"></a>Array Methods</h1><p>import before use <code>import java.util.Arrays;</code></p>
 <ul>
 <li><code>Arrays.equals(arr1, arr2)</code> return true only if both value and order are same</li>
@@ -484,6 +487,20 @@
 <li><code>.getFirst()</code>  return the first element, will give NoSuchElementException for empty list</li>
 <li><code>.getLast()</code> return the last element, will give NoSuchElementExcepetion for empty list</li>
 <li>Complete list of all LinkedList methods at <a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank" rel="noopener">https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html</a></li>
+</ul>
+<h1 id="Iterator-Methods"><a href="#Iterator-Methods" class="headerlink" title="Iterator Methods"></a>Iterator Methods</h1><p>Iterator is an interface that allows us to traverse the collection, access the data element and remove the data elements of the collection<br>Need to import before use, curser will start from the head of the first element </p>
+<ul>
+<li><code>Iterator iterator = list.iterator()</code> Iterator to traverse the list </li>
+<li><code>.hasNext()</code> return true if the Iterator has more element to iterate</li>
+<li><code>.next()</code> return the next element in the collection</li>
+<li><code>.remove()</code> remove the current element in the collection, will throw exception if called before invoke <code>.next()</code></li>
+</ul>
+<h1 id="ListIterator-Methods"><a href="#ListIterator-Methods" class="headerlink" title="ListIterator Methods"></a>ListIterator Methods</h1><p>A kind of Iterator that allows traverse collection in <strong>both direction</strong><br>Need to import before use, curser will start from the head of the first element</p>
+<ul>
+<li><code>.add(object)</code> will insert object before the element that is returned by the <code>.next()</code></li>
+<li><code>.hasPrevious()</code> return true if the list has a pervious element</li>
+<li><code>.previous()</code> return the previous element of the list</li>
+<li><code>.remove()</code> remove the current element from the list, need to invoke <code>.next()</code> or <code>.previous()</code> first</li>
 </ul>
 
       
@@ -655,7 +672,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#String-Methods"><span class="nav-number">1.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Math-Methods"><span class="nav-number">2.</span> <span class="nav-text">Math Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Integer-Methods"><span class="nav-number">3.</span> <span class="nav-text">Integer Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Array-Methods"><span class="nav-number">4.</span> <span class="nav-text">Array Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Class-Methods"><span class="nav-number">5.</span> <span class="nav-text">Class Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ArrayList-Methods"><span class="nav-number">6.</span> <span class="nav-text">ArrayList Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LinkedList-Methods"><span class="nav-number">7.</span> <span class="nav-text">LinkedList Methods</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#String-Methods"><span class="nav-number">1.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Math-Methods"><span class="nav-number">2.</span> <span class="nav-text">Math Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Integer-Methods"><span class="nav-number">3.</span> <span class="nav-text">Integer Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-Methods"><span class="nav-number">4.</span> <span class="nav-text">Object Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Array-Methods"><span class="nav-number">5.</span> <span class="nav-text">Array Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Class-Methods"><span class="nav-number">6.</span> <span class="nav-text">Class Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ArrayList-Methods"><span class="nav-number">7.</span> <span class="nav-text">ArrayList Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LinkedList-Methods"><span class="nav-number">8.</span> <span class="nav-text">LinkedList Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Iterator-Methods"><span class="nav-number">9.</span> <span class="nav-text">Iterator Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ListIterator-Methods"><span class="nav-number">10.</span> <span class="nav-text">ListIterator Methods</span></a></li></ol></div>
             
 
           </div>
