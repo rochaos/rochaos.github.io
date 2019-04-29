@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="读完入门书，算是打了个基础，于是开始跟Udemy上评价不错的一个”Java Programming MasterClass for Software Developers”, 预计20天左右学完，此文用意为学习笔记,毕业为止长期更新。因为基础部分和之前读的”learn Java in one day”是几乎一致的，所以仅记录书中没提到过的一些小细节。顺便非常想吐槽这讲师的口音，简直有种含着口球在上">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-28T08:47:24.604Z">
+<meta property="og:updated_time" content="2019-04-29T12:48:21.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Notes for &quot;Java Programming Masterclass&quot;">
 <meta name="twitter:description" content="读完入门书，算是打了个基础，于是开始跟Udemy上评价不错的一个”Java Programming MasterClass for Software Developers”, 预计20天左右学完，此文用意为学习笔记,毕业为止长期更新。因为基础部分和之前读的”learn Java in one day”是几乎一致的，所以仅记录书中没提到过的一些小细节。顺便非常想吐槽这讲师的口音，简直有种含着口球在上">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-28 16:47:24" itemprop="dateModified" datetime="2019-04-28T16:47:24+08:00">2019-04-28</time>
+                <time title="Modified: 2019-04-29 20:48:21" itemprop="dateModified" datetime="2019-04-29T20:48:21+08:00">2019-04-29</time>
               
             
           </span>
@@ -579,7 +579,12 @@
 <li>private class cannot be called </li>
 </ul>
 <h2 id="Encapsulation"><a href="#Encapsulation" class="headerlink" title="Encapsulation"></a>Encapsulation</h2><p>Use private fields + getter &amp; setter to protect the data, known as data hiding.</p>
-<h2 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="Polymorphism"></a>Polymorphism</h2><p>The ability of an object to take on many forms.<br>Polymorphism in Java has two types: Compile time polymorphism (static binding) and Runtime polymorphism (dynamic binding).<br>Method overloading is an example of static polymorphism, while method overriding is an example of dynamic polymorphism</p>
+<h2 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="Polymorphism"></a>Polymorphism</h2><p>The ability of an object to take on many forms.</p>
+<ul>
+<li>Polymorphism in Java has two types: Compile time polymorphism (static binding) and Runtime polymorphism (dynamic binding).</li>
+<li>Method overloading is an example of static polymorphism, while method overriding is an example of dynamic polymorphism</li>
+<li>Makes the code easy to maintain</li>
+</ul>
 <h2 id="References-Type"><a href="#References-Type" class="headerlink" title="References Type"></a>References Type</h2><ul>
 <li>The keyword <code>new</code> is very important when delcare an array, otherwise will be a pointer to the address only.</li>
 <li><code>new</code> will dereference the reference to another address.</li>
@@ -614,12 +619,18 @@
 <h2 id="Interface"><a href="#Interface" class="headerlink" title="Interface"></a>Interface</h2><p>keyword for Interface is <code>implements</code></p>
 <ul>
 <li><code>InterfaceDemo newObject = new ObjectClass(args)</code> to declare a class with interface</li>
+<li>Declare class as Interface is a kind of polymorphism and takes advantage of that</li>
+<li>Interface can be tagging with no code, just to tag classes</li>
 <li>To call the methods in the class, need to case the interface to class by <code>(ObjectClass)newObject</code></li>
 <li>Difference between Interface and superclass<ul>
 <li>A class can only extend one superClass but can implements many Interfaces</li>
 <li>SuperClass can be what the class is, and interfaces can be what the class can do</li>
 </ul>
 </li>
+</ul>
+<h2 id="Inner-Classes"><a href="#Inner-Classes" class="headerlink" title="Inner Classes"></a>Inner Classes</h2><ul>
+<li>Local class is the class created inside the method</li>
+<li>Anonymous inner class are no name class that can be used to declare an object and assgin it to another object</li>
 </ul>
 
       
@@ -795,7 +806,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Envrionment"><span class="nav-number">1.</span> <span class="nav-text">Envrionment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables"><span class="nav-number">2.</span> <span class="nav-text">Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Data-Types"><span class="nav-number">2.1.</span> <span class="nav-text">Primitive Data Types</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Operator"><span class="nav-number">3.</span> <span class="nav-text">Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Keywords-and-Expressions"><span class="nav-number">4.</span> <span class="nav-text">Keywords and Expressions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Methods"><span class="nav-number">5.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#For-and-While-Statement"><span class="nav-number">6.</span> <span class="nav-text">For and While Statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#If-statement"><span class="nav-number">7.</span> <span class="nav-text">If statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Read-Input"><span class="nav-number">8.</span> <span class="nav-text">Read Input</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OOP"><span class="nav-number">9.</span> <span class="nav-text">OOP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Inheritance"><span class="nav-number">9.1.</span> <span class="nav-text">Inheritance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Composition"><span class="nav-number">9.2.</span> <span class="nav-text">Composition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Encapsulation"><span class="nav-number">9.3.</span> <span class="nav-text">Encapsulation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polymorphism"><span class="nav-number">9.4.</span> <span class="nav-text">Polymorphism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References-Type"><span class="nav-number">9.5.</span> <span class="nav-text">References Type</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#List"><span class="nav-number">10.</span> <span class="nav-text">List</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList"><span class="nav-number">10.1.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LinkedList"><span class="nav-number">10.2.</span> <span class="nav-text">LinkedList</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Interface"><span class="nav-number">10.3.</span> <span class="nav-text">Interface</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Envrionment"><span class="nav-number">1.</span> <span class="nav-text">Envrionment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables"><span class="nav-number">2.</span> <span class="nav-text">Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Primitive-Data-Types"><span class="nav-number">2.1.</span> <span class="nav-text">Primitive Data Types</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Operator"><span class="nav-number">3.</span> <span class="nav-text">Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Keywords-and-Expressions"><span class="nav-number">4.</span> <span class="nav-text">Keywords and Expressions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Methods"><span class="nav-number">5.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#For-and-While-Statement"><span class="nav-number">6.</span> <span class="nav-text">For and While Statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#If-statement"><span class="nav-number">7.</span> <span class="nav-text">If statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Read-Input"><span class="nav-number">8.</span> <span class="nav-text">Read Input</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OOP"><span class="nav-number">9.</span> <span class="nav-text">OOP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Inheritance"><span class="nav-number">9.1.</span> <span class="nav-text">Inheritance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Composition"><span class="nav-number">9.2.</span> <span class="nav-text">Composition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Encapsulation"><span class="nav-number">9.3.</span> <span class="nav-text">Encapsulation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polymorphism"><span class="nav-number">9.4.</span> <span class="nav-text">Polymorphism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References-Type"><span class="nav-number">9.5.</span> <span class="nav-text">References Type</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#List"><span class="nav-number">10.</span> <span class="nav-text">List</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList"><span class="nav-number">10.1.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LinkedList"><span class="nav-number">10.2.</span> <span class="nav-text">LinkedList</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Interface"><span class="nav-number">10.3.</span> <span class="nav-text">Interface</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Inner-Classes"><span class="nav-number">10.4.</span> <span class="nav-text">Inner Classes</span></a></li></ol></li></ol></div>
             
 
           </div>
