@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="Expected to be a useful reference document.Shall keep updating.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-28T08:17:35.582Z">
+<meta property="og:updated_time" content="2019-05-01T14:11:03.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Recording Sheet of Some Pre-written Methods">
 <meta name="twitter:description" content="Expected to be a useful reference document.Shall keep updating.">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-28 16:17:35" itemprop="dateModified" datetime="2019-04-28T16:17:35+08:00">2019-04-28</time>
+                <time title="Modified: 2019-05-01 22:11:03" itemprop="dateModified" datetime="2019-05-01T22:11:03+08:00">2019-05-01</time>
               
             
           </span>
@@ -438,16 +438,20 @@
 </ul>
 <h1 id="Integer-Methods"><a href="#Integer-Methods" class="headerlink" title="Integer Methods"></a>Integer Methods</h1><p>Shall be applicable for other wrapper class (Byte/Short/Long/Float/Double)</p>
 <ul>
-<li><code>Integer.toString(number)</code> to convert a number to String</li>
+<li><code>Integer.toString(number)</code> to convert a number to String, will throw error for ‘null’ argument</li>
 <li><code>Integer.parseInt(String)</code> to cnvert a String to number</li>
 <li><code>Integer.MAX_VALUE</code> to return the max value of the object</li>
 <li><code>Integer.MIN_VALUE</code> to return the min value of the object</li>
 <li><code>Integer.valueOf(number)</code> to return the Integer type of int (unnecessary with autoboxing)</li>
 <li><code>Integer.intValue()</code> to return the int of Integer (unnecessary with unboxing)</li>
-<li><code>String.format(&quot;format_specifiers&quot;, data)</code> to teturn the data with format as String</li>
+<li><code>String.format(&quot;format_specifiers&quot;, data)</code> to return the data with format as String</li>
+<li><code>String.valueOf(number)</code> to return the String type of data, will give “null” for ‘null’ argument </li>
 </ul>
 <h1 id="Object-Methods"><a href="#Object-Methods" class="headerlink" title="Object Methods"></a>Object Methods</h1><ul>
-<li><code>.compareTo(object)</code> will return a negative integer, zero, or positive integer as the object is less than, equal to, or greater than the specified object</li>
+<li><code>obj1.compareTo(obj2)</code> will return a integer result of (obj1 - obj2), the compare is based on the unicode value of each character<pre><code>* &quot; &quot; &lt;- (0~9) &lt;- (A~Z) &lt;- (a~z)
+* negative means obj2 is &quot;bigger&quot;, the order is obj1, ... , obj2, ...
+* positive means ojb1 is &quot;bigger&quot;, the order is obj2, ... , obj1, ...
+</code></pre></li>
 </ul>
 <h1 id="Array-Methods"><a href="#Array-Methods" class="headerlink" title="Array Methods"></a>Array Methods</h1><p>import before use <code>import java.util.Arrays;</code></p>
 <ul>
