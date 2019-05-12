@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="打算学JAVA， 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵。作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。纯自用，目前是打算当作一个基础理论的大纲。顺便吐槽一下自己，抱着一本号称一日速成的好评教材啃了2个礼拜还没吃透的叒鸡简直是人间之屑。 14-Apr-19 更新完毕，">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-26T12:41:04.988Z">
+<meta property="og:updated_time" content="2019-05-12T12:47:28.415Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Notes for &quot;Learn Java in One Day&quot;">
 <meta name="twitter:description" content="打算学JAVA， 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵。作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。纯自用，目前是打算当作一个基础理论的大纲。顺便吐槽一下自己，抱着一本号称一日速成的好评教材啃了2个礼拜还没吃透的叒鸡简直是人间之屑。 14-Apr-19 更新完毕，">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-26 20:41:04" itemprop="dateModified" datetime="2019-04-26T20:41:04+08:00">2019-04-26</time>
+                <time title="Modified: 2019-05-12 20:47:28" itemprop="dateModified" datetime="2019-05-12T20:47:28+08:00">2019-05-12</time>
               
             
           </span>
@@ -415,7 +415,7 @@
       
         <p>打算学JAVA， 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵。<br>作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。<br>纯自用，目前是打算当作一个基础理论的大纲。<br>顺便吐槽一下自己，抱着一本号称一日速成的好评教材啃了2个礼拜还没吃透的叒鸡简直是人间之屑。</p>
 <p>14-Apr-19 更新完毕，最后一章是一个带详细的思路引导的quiz，感觉难度尚可，不过对于很多细节还是不明就里，总而言之本书确实非常基础，适合用来入门，虽然可能也就是半只脚踏进门这种程度，但是对JAVA的一些基础理论算是有个大概的感受了。</p>
-<p>26-Apr-19 修正了一个wapper class的小问题。</p>
+<p>26-Apr-19 修正了一个wapper class的小问题。<br>12-May-19 补充了一下基本架构和size of variables。</p>
 <a id="more"></a>
 <h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><ul>
 <li><strong>main()</strong> method is entry point of all Java applications, whenever a Java application is started, the main() method is the first method to be called;</li>
@@ -423,27 +423,27 @@
 <li>for <code>if</code> and <code>else</code>, <code>{}</code> is unnecessary if action is only one line;</li>
 <li>parameters are varibables in a method definition, and arguments are the data to pass into the parameters</li>
 </ul>
-<h1 id="Baisc-Structure-from-my-current-understanding"><a href="#Baisc-Structure-from-my-current-understanding" class="headerlink" title="Baisc Structure (from my current understanding)"></a>Baisc Structure (from my current understanding)</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> packagename;</span><br><span class="line"><span class="keyword">import</span> java.unil.UntilName;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName</span></span>&#123;&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PackageName</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String dataOne;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> dataTwo;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> dataThree; <span class="comment">//fileds</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        ClassName objectName = <span class="keyword">new</span> ClassName(arguments); <span class="comment">//call constructor in another class</span></span><br><span class="line">        objectName.methodName(arguments); <span class="comment">//perform tasks according to methods in another class</span></span><br><span class="line">        System.out.println(); <span class="comment">//perform task without calling another class</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Baisc-Structure-from-my-current-understanding"><a href="#Baisc-Structure-from-my-current-understanding" class="headerlink" title="Baisc Structure (from my current understanding)"></a>Baisc Structure (from my current understanding)</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> packagename; </span><br><span class="line"><span class="keyword">import</span> java.unil.UntilName;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName</span></span>&#123;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PackageName</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String dataOne;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> dataTwo;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> dataThree; <span class="comment">//fileds</span></span><br><span class="line">    &#123;&#125; <span class="comment">// initializers</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PackageName</span><span class="params">(String dataOne)</span></span>&#123; <span class="comment">//constructor</span></span><br><span class="line">        <span class="keyword">this</span>.dataOne = dataOne;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;  <span class="comment">//methods</span></span><br><span class="line">        ClassName objectName = <span class="keyword">new</span> ClassName(arguments); <span class="comment">//call constructor in another class</span></span><br><span class="line">        objectName.methodName(arguments); <span class="comment">//perform tasks according to methods in another class</span></span><br><span class="line">        System.out.println(); <span class="comment">//perform task without calling another class</span></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="Variables-and-Operators"><a href="#Variables-and-Operators" class="headerlink" title="Variables and Operators"></a>Variables and Operators</h1><h2 id="8-Basic-data-types-predefined-Primitive-data-types"><a href="#8-Basic-data-types-predefined-Primitive-data-types" class="headerlink" title="8 Basic data types (predefined) / Primitive data types"></a>8 Basic data types (predefined) / Primitive data types</h2><ul>
 <li>For storing integers<ul>
-<li><strong>byte</strong> (-128 to 127), use 1 byte (2^8) of storage space.</li>
-<li><strong>short</strong> (-32768 to 32767), use 2 byte (2^16) of storage space.</li>
-<li><strong>int</strong> (-2^31 to 2^31-1), use 4 byte (2^32) of storage space, most commonly used data type</li>
-<li><strong>long</strong> (-2^63 to 2^63-1), use 8 byte (2^64) of storage space, need to add suffix ‘L’ to end of the number, rarely used.</li>
+<li><strong>byte</strong> (-128 to 127), use 1 byte (8bits) of storage space.</li>
+<li><strong>short</strong> (-32768 to 32767), use 2 byte (16bits) of storage space.</li>
+<li><strong>int</strong> (-2^31 to 2^31-1), use 4 byte (32bits) of storage space, most commonly used data type</li>
+<li><strong>long</strong> (-2^63 to 2^63-1), use 8 byte (64bits) of storage space, need to add suffix ‘L’ to end of the number, rarely used.</li>
 </ul>
 </li>
 <li>For storing floating point number<ul>
-<li><strong>float</strong> (-3.40282347E38 to 3.40282347E38), use 4 byte of storage space, as precision of about 7 digits (1.2345678), need to add suffix ‘F’ to the end of number.</li>
-<li><strong>double</strong> (-1.79769……E308 to 1.79769….E308), use 8 byte of storage space, with precision of about 15 digits, by default Jave treat floating point number as double.</li>
+<li><strong>float</strong> (-3.40282347E38 to 3.40282347E38), use 4 byte (32bits) of storage space, as precision of about 7 digits (1.2345678), need to add suffix ‘F’ to the end of number.</li>
+<li><strong>double</strong> (-1.79769……E308 to 1.79769….E308), use 8 byte (64bits) of storage space, with precision of about 15 digits, by default Jave treat floating point number as double.</li>
 </ul>
 </li>
 <li><p>Other primitive data type</p>
 <ul>
-<li><strong>char</strong> (single unicode characters), use 2 bytes of memory, enclose in single quotes, eg. char grade = ‘A’;</li>
-<li><strong>boolean</strong> (true and false)</li>
+<li><strong>char</strong> (single unicode characters), use 2 bytes (16bits) of memory, enclose in single quotes, eg. char grade = ‘A’;</li>
+<li><strong>boolean</strong> (true and false), require only 1 bit of memory, but the size depends on the smallest chunk of memory</li>
 </ul>
 </li>
-<li><p>Other types are reference types</p>
+<li><p>Other types are reference types, only store the address, the size depends on the addressing mechanism of the machine (32bit system-4bytes, 64bit system-8 bytes)</p>
 </li>
 </ul>
 <h2 id="Basic-Operators"><a href="#Basic-Operators" class="headerlink" title="Basic Operators"></a>Basic Operators</h2><ul>
