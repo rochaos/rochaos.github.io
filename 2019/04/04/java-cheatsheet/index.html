@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="打算学JAVA， 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵。作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。纯自用，目前是打算当作一个基础理论的大纲。顺便吐槽一下自己，抱着一本号称一日速成的好评教材啃了2个礼拜还没吃透的叒鸡简直是人间之屑。 14-Apr-19 更新完毕，">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-14T13:19:04.337Z">
+<meta property="og:updated_time" content="2019-05-18T15:13:16.695Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Notes for &quot;Learn Java in One Day&quot;">
 <meta name="twitter:description" content="打算学JAVA， 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵。作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。纯自用，目前是打算当作一个基础理论的大纲。顺便吐槽一下自己，抱着一本号称一日速成的好评教材啃了2个礼拜还没吃透的叒鸡简直是人间之屑。 14-Apr-19 更新完毕，">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-14 21:19:04" itemprop="dateModified" datetime="2019-05-14T21:19:04+08:00">2019-05-14</time>
+                <time title="Modified: 2019-05-18 23:13:16" itemprop="dateModified" datetime="2019-05-18T23:13:16+08:00">2019-05-18</time>
               
             
           </span>
@@ -415,7 +415,7 @@
       
         <p>打算学JAVA， 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵。<br>作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。<br>纯自用，目前是打算当作一个基础理论的大纲。<br>顺便吐槽一下自己，抱着一本号称一日速成的好评教材啃了2个礼拜还没吃透的叒鸡简直是人间之屑。</p>
 <p>14-Apr-19 更新完毕，最后一章是一个带详细的思路引导的quiz，感觉难度尚可，不过对于很多细节还是不明就里，总而言之本书确实非常基础，适合用来入门，虽然可能也就是半只脚踏进门这种程度，但是对JAVA的一些基础理论算是有个大概的感受了。</p>
-<p>26-Apr-19 修正了一个wapper class的小问题。<br>12-May-19 补充了一下基本架构和size of variables。<br>14-May-19 补充wrapping</p>
+<p>26-Apr-19 修正了一个wapper class的小问题。<br>12-May-19 补充了一下基本架构和size of variables。<br>14-May-19 补充wrapping<br>18-May-19 补充loop</p>
 <a id="more"></a>
 <h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><ul>
 <li><strong>main()</strong> method is entry point of all Java applications, whenever a Java application is started, the main() method is the first method to be called;</li>
@@ -503,8 +503,17 @@
 <li><p>Basic usage<br>Same as JS</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] myArray = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;; <span class="comment">//int is type of data in array</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i =<span class="number">0</span>; i &lt; myArray.length; i++)</span><br><span class="line">&#123;</span><br><span class="line">    System.out.println(myArray[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Enhanced For statement</p>
+<li><p>Enhanced For statement (for-each loop)</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] myArray = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> args: myArray)</span><br><span class="line">&#123;</span><br><span class="line">    System.out.println(args);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>For-each loop has some limites:<ul>
+<li>not appropriate when you want to modify the array</li>
+<li>do not keep track of index</li>
+<li>only iterates forward over the array in single steps</li>
+<li>cannot process two decision making statements at once</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <h3 id="While-Statement"><a href="#While-Statement" class="headerlink" title="While Statement"></a>While Statement</h3><ul>

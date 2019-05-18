@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="Expected to be a useful reference document.Shall keep updating.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-01T14:11:03.835Z">
+<meta property="og:updated_time" content="2019-05-18T14:42:25.196Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Recording Sheet of Some Pre-written Methods">
 <meta name="twitter:description" content="Expected to be a useful reference document.Shall keep updating.">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-01 22:11:03" itemprop="dateModified" datetime="2019-05-01T22:11:03+08:00">2019-05-01</time>
+                <time title="Modified: 2019-05-18 22:42:25" itemprop="dateModified" datetime="2019-05-18T22:42:25+08:00">2019-05-18</time>
               
             
           </span>
@@ -419,7 +419,7 @@
 <li><code>.toUpperCase()/.toLowerCase()</code> return string with uppercase/lowercase characters</li>
 <li><code>.substring(i)</code> return a string start from i<sup>th</sup> character (count from 0)</li>
 <li><code>.substring(m,n)</code> return a string start from m<sup>th</sup> and end at n<sup>th</sup> character (n<sup>th</sup> character is not included)</li>
-<li><code>.charAt(i)</code> return i<sup>th</sup> character of the string</li>
+<li><code>.charAt(i)</code> return i<sup>th</sup> <strong>character</strong> of the string (char is not a string object)</li>
 <li><code>.equals(&quot;string&quot;)</code> return true or false if they are equal or not</li>
 <li><code>.equalsIgnoreCase(&quot;string&quot;)</code> will ingore the upper or lower case</li>
 <li><code>.isEmpty()</code> return true for empty string</li>
@@ -436,7 +436,7 @@
 <li><code>Math.PI</code> return the value of PI (3.1415926….)</li>
 <li><code>Math.random()</code> return a random double between 0 and 1</li>
 </ul>
-<h1 id="Integer-Methods"><a href="#Integer-Methods" class="headerlink" title="Integer Methods"></a>Integer Methods</h1><p>Shall be applicable for other wrapper class (Byte/Short/Long/Float/Double)</p>
+<h1 id="Number-Methods"><a href="#Number-Methods" class="headerlink" title="Number Methods"></a>Number Methods</h1><p>Shall be applicable for other wrapper class (Byte/Short/Long/Float/Double)</p>
 <ul>
 <li><code>Integer.toString(number)</code> to convert a number to String, will throw error for ‘null’ argument</li>
 <li><code>Integer.parseInt(String)</code> to cnvert a String to number</li>
@@ -444,10 +444,12 @@
 <li><code>Integer.MIN_VALUE</code> to return the min value of the object</li>
 <li><code>Integer.valueOf(number)</code> to return the Integer type of int (unnecessary with autoboxing)</li>
 <li><code>Integer.intValue()</code> to return the int of Integer (unnecessary with unboxing)</li>
-<li><code>String.format(&quot;format_specifiers&quot;, data)</code> to return the data with format as String</li>
-<li><code>String.valueOf(number)</code> to return the String type of data, will give “null” for ‘null’ argument </li>
+<li><code>Integer.toBinaryString(number)</code> to return the binary type of number (works for Integer only)</li>
 </ul>
 <h1 id="Object-Methods"><a href="#Object-Methods" class="headerlink" title="Object Methods"></a>Object Methods</h1><ul>
+<li><code>String.format(&quot;format_specifiers&quot;, data)</code> to return the data with format as String</li>
+<li><code>String.valueOf(number)</code> to return the String type of data, will give “null” for ‘null’ argument</li>
+<li><code>obj instanceof Object</code> will return true if obj is an instance of Object </li>
 <li><code>obj1.compareTo(obj2)</code> will return a integer result of (obj1 - obj2), the compare is based on the unicode value of each character<pre><code>* &quot; &quot; &lt;- (0~9) &lt;- (A~Z) &lt;- (a~z)
 * negative means obj2 is &quot;bigger&quot;, the order is obj1, ... , obj2, ...
 * positive means ojb1 is &quot;bigger&quot;, the order is obj2, ... , obj1, ...
@@ -678,7 +680,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#String-Methods"><span class="nav-number">1.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Math-Methods"><span class="nav-number">2.</span> <span class="nav-text">Math Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Integer-Methods"><span class="nav-number">3.</span> <span class="nav-text">Integer Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-Methods"><span class="nav-number">4.</span> <span class="nav-text">Object Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Array-Methods"><span class="nav-number">5.</span> <span class="nav-text">Array Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Class-Methods"><span class="nav-number">6.</span> <span class="nav-text">Class Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ArrayList-Methods"><span class="nav-number">7.</span> <span class="nav-text">ArrayList Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LinkedList-Methods"><span class="nav-number">8.</span> <span class="nav-text">LinkedList Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Iterator-Methods"><span class="nav-number">9.</span> <span class="nav-text">Iterator Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ListIterator-Methods"><span class="nav-number">10.</span> <span class="nav-text">ListIterator Methods</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#String-Methods"><span class="nav-number">1.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Math-Methods"><span class="nav-number">2.</span> <span class="nav-text">Math Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Number-Methods"><span class="nav-number">3.</span> <span class="nav-text">Number Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-Methods"><span class="nav-number">4.</span> <span class="nav-text">Object Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Array-Methods"><span class="nav-number">5.</span> <span class="nav-text">Array Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Class-Methods"><span class="nav-number">6.</span> <span class="nav-text">Class Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ArrayList-Methods"><span class="nav-number">7.</span> <span class="nav-text">ArrayList Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LinkedList-Methods"><span class="nav-number">8.</span> <span class="nav-text">LinkedList Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Iterator-Methods"><span class="nav-number">9.</span> <span class="nav-text">Iterator Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ListIterator-Methods"><span class="nav-number">10.</span> <span class="nav-text">ListIterator Methods</span></a></li></ol></div>
             
 
           </div>
