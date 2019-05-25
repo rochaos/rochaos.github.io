@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="打算学JAVA， 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵。作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。纯自用，目前是打算当作一个基础理论的大纲。顺便吐槽一下自己，抱着一本号称一日速成的好评教材啃了2个礼拜还没吃透的叒鸡简直是人间之屑。 14-Apr-19 更新完毕，">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-18T15:13:16.695Z">
+<meta property="og:updated_time" content="2019-05-25T09:24:47.079Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Notes for &quot;Learn Java in One Day&quot;">
 <meta name="twitter:description" content="打算学JAVA， 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵。作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。纯自用，目前是打算当作一个基础理论的大纲。顺便吐槽一下自己，抱着一本号称一日速成的好评教材啃了2个礼拜还没吃透的叒鸡简直是人间之屑。 14-Apr-19 更新完毕，">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-18 23:13:16" itemprop="dateModified" datetime="2019-05-18T23:13:16+08:00">2019-05-18</time>
+                <time title="Modified: 2019-05-25 17:24:47" itemprop="dateModified" datetime="2019-05-25T17:24:47+08:00">2019-05-25</time>
               
             
           </span>
@@ -575,7 +575,10 @@
 </li>
 </ul>
 <h2 id="Static"><a href="#Static" class="headerlink" title="Static"></a>Static</h2><p>A keyword used call methods or access fields in the Class without creating a object<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> data = <span class="number">65535</span>; <span class="comment">// static filed</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>&#123;&#125;  <span class="comment">//static method</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>Can be directly called by <code>MyClass.data</code> and <code>MyClass.doSomething</code><br>tips. Array class is declared as static, so can call methods like <code>Arrays.sort()</code> directly</p>
+<ul>
+<li>Can be directly called by <code>MyClass.data</code> and <code>MyClass.doSomething</code></li>
+<li>Static methods cannot be overridden, but can be hidden by subclass<br>tips. Array class is declared as static, so can call methods like <code>Arrays.sort()</code> directly</li>
+</ul>
 <h2 id="Advanced-Methods"><a href="#Advanced-Methods" class="headerlink" title="Advanced Methods"></a>Advanced Methods</h2><h3 id="Useing-Arrays-in-Method-reference-data-type"><a href="#Useing-Arrays-in-Method-reference-data-type" class="headerlink" title="Useing Arrays in Method (reference data type)"></a>Useing Arrays in Method (reference data type)</h3><ul>
 <li>Use array as parameters<br>  <code>public void thisAcceptArray(int[] a){}</code></li>
 <li>Use array as return type<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] returnArray()&#123;</span><br><span class="line">    <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[length_of_array];</span><br><span class="line">    <span class="comment">//codes</span></span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -632,8 +635,8 @@
 <li>Also cannot be instantiated</li>
 <li>Must be implemented by classes or extended by other interfaces</li>
 <li>Can only contain abstract methods(no body methods) and constants(final fields) <strong>[JAVA 7]</strong></li>
-<li>All methods in interface ae implicitly <strong>public</strong></li>
-<li>All constrant values are implicity <strong>public, static and final</strong></li>
+<li>All methods in interface are implicitly <strong>public</strong></li>
+<li>All constant values are implicity <strong>public, static and final</strong></li>
 <li>A class can only extend one abstract class but can implement multiple inferfaces</li>
 <li><p>A class that implements an interface <strong>must implement all the abstract methods</strong> in the interface</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> <span class="keyword">implements</span> <span class="title">MyInterface</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">someMethod</span><span class="params">()</span></span>&#123; <span class="comment">//implement the methods</span></span><br><span class="line">        <span class="comment">//codes</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">MyInterface</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">someMethod</span><span class="params">()</span></span>; <span class="comment">//no need abstract and public keyword</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">someStaticMethod</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//Static methods, use MyInterface.someStaticMethod() to call</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">someDefaultMethod</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//Default methods, use object.someDefaultMethod() to call</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -641,6 +644,8 @@
 <li><p>Keyword <code>implements</code> is used to indicate the interface</p>
 </li>
 <li><code>static</code> and <code>default</code> methods are added since <strong>JAVA 8</strong>, cannot be override</li>
+<li><code>default</code> methods of an interface can be inherited</li>
+<li><code>static</code> methods of an interface cannot be inherited </li>
 </ul>
 <h2 id="Access-Modifiers-Revisited"><a href="#Access-Modifiers-Revisited" class="headerlink" title="Access Modifiers Revisited"></a>Access Modifiers Revisited</h2><ul>
 <li>If the access modifier is not stated, it will be <code>package-private</code></li>
