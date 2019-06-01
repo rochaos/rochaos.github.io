@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="Expected to be a useful reference document.Shall keep updating.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-18T14:42:25.196Z">
+<meta property="og:updated_time" content="2019-06-01T07:31:07.681Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Recording Sheet of Some Pre-written Methods">
 <meta name="twitter:description" content="Expected to be a useful reference document.Shall keep updating.">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-18 22:42:25" itemprop="dateModified" datetime="2019-05-18T22:42:25+08:00">2019-05-18</time>
+                <time title="Modified: 2019-06-01 15:31:07" itemprop="dateModified" datetime="2019-06-01T15:31:07+08:00">2019-06-01</time>
               
             
           </span>
@@ -414,19 +414,40 @@
 
       
         <p>Expected to be a useful reference document.<br>Shall keep updating.<br><a id="more"></a></p>
-<h1 id="String-Methods"><a href="#String-Methods" class="headerlink" title="String Methods"></a>String Methods</h1><ul>
+<h1 id="String-Methods"><a href="#String-Methods" class="headerlink" title="String Methods"></a>String Methods</h1><p>String is final and ummutable, methods apply to string will return a new string.</p>
+<ul>
 <li><code>.length()</code> return total number of characters</li>
 <li><code>.toUpperCase()/.toLowerCase()</code> return string with uppercase/lowercase characters</li>
 <li><code>.substring(i)</code> return a string start from i<sup>th</sup> character (count from 0)</li>
 <li><code>.substring(m,n)</code> return a string start from m<sup>th</sup> and end at n<sup>th</sup> character (n<sup>th</sup> character is not included)</li>
+<li><code>.concat(char[])</code> concatenates char[] to end of this string, null arguments will throw NullPointerException<pre><code>* to add null to a String, can just use `+`
+</code></pre></li>
 <li><code>.charAt(i)</code> return i<sup>th</sup> <strong>character</strong> of the string (char is not a string object)</li>
-<li><code>.equals(&quot;string&quot;)</code> return true or false if they are equal or not</li>
+<li><code>.indexOf(&#39;char&#39;)</code> return the index of the 1st ‘char’ in the string</li>
+<li><code>.replace(&#39;oldchar&#39;, &#39;newchar&#39;)</code> return a new string with replacing of <strong>ALL</strong> oldchar</li>
+<li><code>.equals(&quot;string&quot;)</code> return true or false if their <strong>values</strong> are equal or not</li>
 <li><code>.equalsIgnoreCase(&quot;string&quot;)</code> will ingore the upper or lower case</li>
+<li><code>.toCharArray()</code> to return a array to characters from the string</li>
 <li><code>.isEmpty()</code> return true for empty string</li>
+<li><code>.startsWith(&quot;string&quot;)/.endsWith(&quot;string&quot;)</code> return true if the string starts of ends with “string”</li>
+<li><code>.contains(CharSequences s)</code> return true only if the string contains the specified sequence of char values</li>
+<li><code>.trim()</code> return a new copy of the string with leading and trailing whitespace ommited</li>
 <li><p><code>.split(&quot;separator&quot;)</code> returns array of substrings, based on the separator<br>  for example:</p>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String names = <span class="string">"Peter, John, Andy, David"</span>;</span><br><span class="line">String[] splitNames = names.split(<span class="string">", "</span>);</span><br></pre></td></tr></table></figure>
 <pre><code>splitNames will be {&quot;Peter&quot;, &quot;John&quot;, &quot;Andy&quot;, &quot;David&quot;};
 </code></pre></li>
+</ul>
+<h1 id="StringBuilder-Methods"><a href="#StringBuilder-Methods" class="headerlink" title="StringBuilder Methods"></a>StringBuilder Methods</h1><p>StringBuilder is mutable and more suitable for creating temporary strings</p>
+<ul>
+<li><code>.append()</code> to add a string to end of the StringBuilder, for null argument, “null” will be appended</li>
+<li><code>.insert(index, char[])</code> to insert the char[] at the index, won’t compile to null</li>
+<li><code>.reverse()</code> to reverse the chars in the StringBuilder</li>
+<li><code>.delete(int start, int end)</code> to delete chars in the StringBuilder<pre><code>* `.deleteCharAt(int index)` to delete char at the index
+</code></pre></li>
+<li><code>.replace(int start, int end, String replacement)</code> to replace part of the StringBuilder</li>
+<li>–methods below cannot be chanined–</li>
+<li><code>.setLength(int)</code> will set a new StringBuilder with the length and copy contents into it</li>
+<li><code>.subString(int start)</code> will return a new String</li>
 </ul>
 <h1 id="Math-Methods"><a href="#Math-Methods" class="headerlink" title="Math Methods"></a>Math Methods</h1><ul>
 <li><code>Math.round(x)</code> can be used to round a number, will return long type number (123.4 -&gt;123 ; 123.5-&gt;124)</li>
@@ -446,10 +467,14 @@
 <li><code>Integer.intValue()</code> to return the int of Integer (unnecessary with unboxing)</li>
 <li><code>Integer.toBinaryString(number)</code> to return the binary type of number (works for Integer only)</li>
 </ul>
+<h1 id="Character-Methods"><a href="#Character-Methods" class="headerlink" title="Character Methods"></a>Character Methods</h1><ul>
+<li><code>Character.toLowerCase(c)</code> to convert char c to lowercase</li>
+</ul>
 <h1 id="Object-Methods"><a href="#Object-Methods" class="headerlink" title="Object Methods"></a>Object Methods</h1><ul>
 <li><code>String.format(&quot;format_specifiers&quot;, data)</code> to return the data with format as String</li>
 <li><code>String.valueOf(number)</code> to return the String type of data, will give “null” for ‘null’ argument</li>
 <li><code>obj instanceof Object</code> will return true if obj is an instance of Object </li>
+<li><code>obj1.equals(obj2)</code> will return true only if obj1 and obj2 <strong>point to the same object</strong></li>
 <li><code>obj1.compareTo(obj2)</code> will return a integer result of (obj1 - obj2), the compare is based on the unicode value of each character<pre><code>* &quot; &quot; &lt;- (0~9) &lt;- (A~Z) &lt;- (a~z)
 * negative means obj2 is &quot;bigger&quot;, the order is obj1, ... , obj2, ...
 * positive means ojb1 is &quot;bigger&quot;, the order is obj2, ... , obj1, ...
@@ -457,13 +482,14 @@
 </ul>
 <h1 id="Array-Methods"><a href="#Array-Methods" class="headerlink" title="Array Methods"></a>Array Methods</h1><p>import before use <code>import java.util.Arrays;</code></p>
 <ul>
+<li><code>Arrays.asList(array)</code> converts the array into a <strong>List</strong>(not arrayList)</li>
 <li><code>Arrays.equals(arr1, arr2)</code> return true only if both value and order are same</li>
 <li><code>Arrays.copyOf(arr, length of new array)</code> will copy the array with a new length, useful for adjustment of array size</li>
 <li><code>Arrays.copyOfRange(source, m ,n)</code> will return elements from index m to index (n-1), index n is not copied</li>
 <li><code>Arrays.toString(arr)</code> return the contents of an array</li>
 <li><code>Arrays.sort(arr)</code> will sort the array in ascending order</li>
 <li><code>Arrays.binarySearch(arr, value)</code> will return the index of the value for a sorted array, if not found, will return -i, (i-1) is the supposed index</li>
-<li><code>.length</code> return the size of a array, no parenthesis</li>
+<li><code>.length</code> return the size of a array, <strong>no parenthesis</strong></li>
 </ul>
 <h1 id="Class-Methods"><a href="#Class-Methods" class="headerlink" title="Class Methods"></a>Class Methods</h1><ul>
 <li><code>.getClass()</code> to return the current class name<pre><code>* Add ons
@@ -473,17 +499,23 @@
 </ul>
 <h1 id="ArrayList-Methods"><a href="#ArrayList-Methods" class="headerlink" title="ArrayList Methods"></a>ArrayList Methods</h1><p>The following methods are pre-written, typical usage will be <code>nameOfArrayList.method()</code></p>
 <ul>
-<li><code>.add(data)</code>, to add members to a list<ul>
-<li><code>.add(index, data)</code> to add data at specific position</li>
+<li><code>.add(element)</code>, to add members to a list, return true when list had changed<ul>
+<li><code>.add(index, element)</code> to add element at specific position, <strong>no return</strong></li>
 </ul>
 </li>
-<li><code>.addAll(arraylist)</code> to copy from the whole arraylist</li>
-<li><code>.set(index, data)</code> to replace data at specific position</li>
-<li><code>.remove(index)</code> to remove data at specific position</li>
-<li><code>.get(index)</code> to get data at specific position</li>
+<li><code>.addAll(collection)</code> to append all element of an arrayList to end of the list </li>
+<li><code>.set(index, element)</code> to replace element at specific position, <strong>return the element</strong> that was replaced</li>
+<li><code>.remove(index)</code> to remove element at specific position, <strong>return the element</strong> that has been removed</li>
+<li><code>.remove(element)</code> to remove the first occurrence of an element, will return true when list had changed</li>
+<li><code>.removaAll(collection)</code> to remove all elements that are contained in the collection</li>
+<li><code>.clear()</code> to remove all elements from the list, <strong>no return</strong></li>
+<li><code>.get(index)</code> to get element at specific position </li>
 <li><code>.size()</code> to get the number of elements in the list</li>
-<li><code>.contains(data)</code> to check if list contains the data, will return true / false</li>
-<li><code>.indexOf(data)</code> to get the index of the <strong>first</strong> occurrence of an element, will return -1 if element does not exist</li>
+<li><code>.trimToSize()</code> to trim all unused space</li>
+<li><code>.ensureCapacity(int)</code> to change the capacity</li>
+<li><code>.contains(element)</code> to check if list contains the element, will return true / false</li>
+<li><code>.indexOf(element)</code> to get the index of the <strong>first</strong> occurrence of an element, will return -1 if element does not exist</li>
+<li><code>.subList(m,n)</code> return a List of elements between index m and n (n is exclusive), <strong>change on subList applies to original list</strong></li>
 <li><code>.toArray()</code> returns an array of <strong>object</strong> containing all the elements, from first to last element<pre><code>* to pass the data to an array, use `.toArray(arrayName)`
 </code></pre></li>
 <li><code>.toString()</code> return the value of the arraylist as an array</li>
@@ -509,6 +541,58 @@
 <li><code>.hasPrevious()</code> return true if the list has a pervious element</li>
 <li><code>.previous()</code> return the previous element of the list</li>
 <li><code>.remove()</code> remove the current element from the list, need to invoke <code>.next()</code> or <code>.previous()</code> first</li>
+</ul>
+<h1 id="LocalDate-LocalTime-LocalDateTime-methods-JAVA-8"><a href="#LocalDate-LocalTime-LocalDateTime-methods-JAVA-8" class="headerlink" title="LocalDate/LocalTime/LocalDateTime methods (JAVA 8)"></a>LocalDate/LocalTime/LocalDateTime methods (JAVA 8)</h1><p>Belongs java.time package, all date/time objects are immutable<br>none of the classes have a public constructor, cannot create using <code>new</code> operator</p>
+<ul>
+<li><code>.now()</code> returns an instance of the object that represents current data or time</li>
+<li><code>static LocalDate of()</code> to create an object for any date<pre><code>* `.of(int year, int month, int dayOfMonth)`
+* `.of(int year, Month month, int dayOfMonth)`
+</code></pre></li>
+<li><code>static LocalTime of()</code> to create an object for any time<pre><code>* `.of(int hour, int minute, int second, int nanoSecond)`, second and nanoSecond not compulsory
+</code></pre></li>
+<li><code>static LocalDateTime of()</code> to create an object for any date and time<pre><code>* `.of(LocalDate date, LocalTime time)`, or use `year, month, day, hour, minute, second, nanoSecond`
+</code></pre></li>
+<li><code>.from(LocalDate/LocalTime/LocalDateTime)</code> create an object from the temporal accessor<pre><code>* Cannot create LocalDate from LocalTime/LocalDateTime
+</code></pre></li>
+<li><code>.plus/minusXXX(amount)</code> to modify the proterties</li>
+<li><code>.plus/minus(TemporalAmount amount)</code> to modify a amount of temporal, eg. <code>Period.of(0,0,10)</code> for 10 days</li>
+<li><code>.plus/minus(long amount, TemporalUnit)</code>, eg. <code>(10, ChronoUnit.DAYS)</code> for 10 days</li>
+<li><code>.withXXX(amount)</code> to modify the property directly</li>
+<li><p><code>.atTime()/atDate()</code> to add a time/date component to existing date/time, returns a refrence of <strong>different type</strong></p>
+</li>
+<li><p><code>static LocalDate/LocalTime/LocalDateTime parse(CharSequence text)</code> to convert String into date/time</p>
+<pre><code>* `parse(CharSequence text, DateTimeFormatter formatter)` to apply a formatter
+</code></pre></li>
+<li><p><code>.equals()</code> return true for same class and same content</p>
+</li>
+<li><code>.compareTo()</code> return an int, negative if argument is later</li>
+<li><code>.isAfter()/isBefore()</code> return true if is after/before the argument</li>
+<li><code>.isEqual()</code> return true if the <strong>date</strong> is equal<pre><code>* `.isXXX()` ignore the calendar system
+</code></pre></li>
+</ul>
+<h1 id="Period-Duration-methods-JAVA-8"><a href="#Period-Duration-methods-JAVA-8" class="headerlink" title="Period/Duration methods (JAVA 8)"></a>Period/Duration methods (JAVA 8)</h1><p>Belongs java.time package, period is date(Y-M-D) based, duration is time(h:m:s) based<br>cannot create using <code>new</code> operator, </p>
+<ul>
+<li><code>.ZERO</code> represents a period of zero</li>
+<li><code>static Period of()</code> to create an object for any period/duration<pre><code>* `of(int years, int months, int days)`
+* `ofDays/ofMonth/ofWeeks/ofYears()` 
+</code></pre></li>
+<li><code>.withXXXs(amount)</code> to modify the property<pre><code>`.withXXXs(amount).negated()` to return a new period with amount for each component negated
+</code></pre></li>
+<li><code>.parse(&quot;PnYnMnWnD&quot;)</code> to parse string into period, n is number, case of letter not imprtant</li>
+<li><code>.equals()</code> return true if all three components are equal</li>
+<li><code>.isZero()</code> return true if all three components are zero</li>
+<li><code>.isNegative()</code> return true if any of the compinent is negative</li>
+</ul>
+<h1 id="DataTimeFormatter-Class-JAVA-8"><a href="#DataTimeFormatter-Class-JAVA-8" class="headerlink" title="DataTimeFormatter Class (JAVA 8)"></a>DataTimeFormatter Class (JAVA 8)</h1><p><code>import java.time.format.DateTimeFormatter</code> before use</p>
+<ul>
+<li><code>DataTimeFormatter.ofPattern(&quot;MMM/dd/yy&quot;)</code> to create a formatter<pre><code>* Month and Hour are upper case, the rest are lower case
+* ISO formatter are __yyyy-mMM-ddTHH:mm:ss__
+</code></pre></li>
+<li><code>dtf.format(Temporal Accessor)</code> returns formated string </li>
+<li><code>static DataTimeFormatter ofLocalizedDate/Time/DateTime(FormatStyle)</code> create a build-in formatter<pre><code>* `ofLocalizedDateTime(dateStyle, timeStyle)` 
+* FormatStyle is an enum with `FULL/LONG/MEDIUM/SHORT` four valuse, need to import java.time.format.FormatStyle;
+* FormatStyle.FULL/LONG will throw Exception for LocalDateTime and LocalTime
+</code></pre></li>
 </ul>
 
       
@@ -680,7 +764,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#String-Methods"><span class="nav-number">1.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Math-Methods"><span class="nav-number">2.</span> <span class="nav-text">Math Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Number-Methods"><span class="nav-number">3.</span> <span class="nav-text">Number Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-Methods"><span class="nav-number">4.</span> <span class="nav-text">Object Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Array-Methods"><span class="nav-number">5.</span> <span class="nav-text">Array Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Class-Methods"><span class="nav-number">6.</span> <span class="nav-text">Class Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ArrayList-Methods"><span class="nav-number">7.</span> <span class="nav-text">ArrayList Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LinkedList-Methods"><span class="nav-number">8.</span> <span class="nav-text">LinkedList Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Iterator-Methods"><span class="nav-number">9.</span> <span class="nav-text">Iterator Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ListIterator-Methods"><span class="nav-number">10.</span> <span class="nav-text">ListIterator Methods</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#String-Methods"><span class="nav-number">1.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#StringBuilder-Methods"><span class="nav-number">2.</span> <span class="nav-text">StringBuilder Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Math-Methods"><span class="nav-number">3.</span> <span class="nav-text">Math Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Number-Methods"><span class="nav-number">4.</span> <span class="nav-text">Number Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Character-Methods"><span class="nav-number">5.</span> <span class="nav-text">Character Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-Methods"><span class="nav-number">6.</span> <span class="nav-text">Object Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Array-Methods"><span class="nav-number">7.</span> <span class="nav-text">Array Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Class-Methods"><span class="nav-number">8.</span> <span class="nav-text">Class Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ArrayList-Methods"><span class="nav-number">9.</span> <span class="nav-text">ArrayList Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LinkedList-Methods"><span class="nav-number">10.</span> <span class="nav-text">LinkedList Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Iterator-Methods"><span class="nav-number">11.</span> <span class="nav-text">Iterator Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ListIterator-Methods"><span class="nav-number">12.</span> <span class="nav-text">ListIterator Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LocalDate-LocalTime-LocalDateTime-methods-JAVA-8"><span class="nav-number">13.</span> <span class="nav-text">LocalDate/LocalTime/LocalDateTime methods (JAVA 8)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Period-Duration-methods-JAVA-8"><span class="nav-number">14.</span> <span class="nav-text">Period/Duration methods (JAVA 8)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DataTimeFormatter-Class-JAVA-8"><span class="nav-number">15.</span> <span class="nav-text">DataTimeFormatter Class (JAVA 8)</span></a></li></ol></div>
             
 
           </div>
