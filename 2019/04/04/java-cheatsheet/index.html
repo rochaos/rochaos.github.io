@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Marvin&#39;s Development Record">
 <meta property="og:description" content="打算学JAVA， 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵。作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。纯自用，目前是打算当作一个基础理论的大纲。顺便吐槽一下自己，抱着一本号称一日速成的好评教材啃了2个礼拜还没吃透的叒鸡简直是人间之屑。 14-Apr-19 更新完毕，">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-25T09:24:47.079Z">
+<meta property="og:updated_time" content="2019-06-04T15:12:56.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Notes for &quot;Learn Java in One Day&quot;">
 <meta name="twitter:description" content="打算学JAVA， 目前在读的是Jamie Chan的learn java in one day and learn it well，买下本书的时候是亚马逊排名第一的书，价格也不贵。作为新人自然是什么都不懂，于是留点东西当作学习笔记好了。纯自用，目前是打算当作一个基础理论的大纲。顺便吐槽一下自己，抱着一本号称一日速成的好评教材啃了2个礼拜还没吃透的叒鸡简直是人间之屑。 14-Apr-19 更新完毕，">
@@ -361,7 +361,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-25 17:24:47" itemprop="dateModified" datetime="2019-05-25T17:24:47+08:00">2019-05-25</time>
+                <time title="Modified: 2019-06-04 23:12:56" itemprop="dateModified" datetime="2019-06-04T23:12:56+08:00">2019-06-04</time>
               
             
           </span>
@@ -739,7 +739,7 @@
 </table>
 <ul>
 <li>Wrapper class is reference type data</li>
-<li>To convert primitive data into object<br>  <code>Integer intObject = new Integer(100)</code>  //create a new object<br>  // method 1, most accept primitive and string, char only accept primitive, float accept double<br>  <code>Integer intObject = Integer.valueOf(100)</code> //may return a cached object, more efficient than constructors<br>  //method 2, most accept primitive and string, char only accept primitive, fload DOESN’T accept double<br>  <code>Double douObj = Double.valueOf(int)</code> is OK as <strong>widening conversion</strong> is automatically done by compiler<br>  <code>Short shortObj = Short.valueOf(int)</code> is NOT OK as <strong>implicit narrowing</strong> is not automatically for method calls </li>
+<li>To convert primitive data into object<br>  <code>Integer intObject = new Integer(100)</code>  //create a new object<br>  // method 1, most accept primitive and string, char only accept primitive, float accept double<br>  <code>Integer intObject = Integer.valueOf(100)</code> //may return a cached object, more efficient than constructors<br>  //method 2, most accept primitive and string, char only accept primitive, float DOESN’T accept double<br>  <code>Double douObj = Double.valueOf(int)</code> is OK as <strong>widening conversion</strong> is automatically done by compiler<br>  <code>Short shortObj = Short.valueOf(int)</code> is NOT OK as <strong>implicit narrowing</strong> is not automatically for method calls </li>
 <li>To conver object back to primitive data<br>  <code>int m = intObject.intValue()</code></li>
 <li>With autoboxing and unboxing, covert can be simplified as<br>  <code>Integer intObject = 100</code> and <code>int m = intObject</code></li>
 <li>To conver object to primitive type<br>  <code>int n = Integer.parseInt(&quot;5&quot;)</code> or <code>double q = Double.parseDouble(&quot;5.1&quot;)</code></li>
